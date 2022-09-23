@@ -114,7 +114,9 @@
 	/// Gamemodes which end instantly will instead keep on going until the round ends by escape shuttle or nuke.
 	var/static/continous_rounds = FALSE
 
-	var/static/fps = 30
+	var/static/fps = 35
+	
+	var/static/clientfps = 65
 
 	var/static/list/resource_urls
 
@@ -676,6 +678,8 @@
 				fps = round(text2num(value))
 				if (fps <= 0)
 					fps = initial(fps)
+			if("clientfps")
+				clientfps = text2num(value)
 			if ("allow_antag_hud")
 				antag_hud_allowed = TRUE
 			if ("antag_hud_restricted")

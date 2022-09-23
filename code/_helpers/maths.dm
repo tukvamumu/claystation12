@@ -90,6 +90,9 @@
 	var/a = arccos(x / sqrt(x * x + y * y))
 	return y >= 0 ? a : -a
 
+/proc/Ceiling(x)
+	return -round(-x)
+
 
 /// Returns a linear interpolation from a to b according to weight. weight 0 is a, weight 1 is b, weight 0.5 is half-way between the two.
 /proc/Interpolate(a, b, weight = 0.5)
