@@ -1137,6 +1137,9 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	else
 		step(user.pulling, get_dir(user.pulling.loc, A))
 
+/proc/REF(input)
+	return "\ref[input]"
+
 /proc/select_subpath(given_path, within_scope = /atom)
 	var/desired_path = input("Enter full or partial typepath.","Typepath","[given_path]") as text|null
 	if(!desired_path)

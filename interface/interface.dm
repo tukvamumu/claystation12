@@ -55,10 +55,11 @@
 
 	var/admin = {"<font color='purple'>
 Admin:
-\tF5 = Aghost (admin-ghost)
-\tF6 = player-panel-new
-\tF7 = admin-pm
-\tF8 = Invisimin
+\tF5 = Admin Chat
+\tF6 = Aghost
+\tF7 = Player panel
+\tF8 = Send PM
+\tF9 = Invismin
 </font>"}
 
 	var/hotkey_mode = {"<font color='purple'>
@@ -74,8 +75,9 @@ Hotkey-Mode: (hotkey-mode must be on)
 \te = equip
 \tr = throw
 \tt = say
-\t5 = emote
+\tm = emote
 \tx = swap-hand
+\tc = stop pulling
 \tz = activate held object (or y)
 \tj = toggle-aiming-mode
 \tf = cycle-intents-left

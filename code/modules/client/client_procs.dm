@@ -213,6 +213,9 @@
 
 	if(holder)
 		src.control_freak = 0 //Devs need 0 for profiler access
+		
+	if(SSinput.initialized)
+		set_macros()
 
 	//////////////
 	//DISCONNECT//

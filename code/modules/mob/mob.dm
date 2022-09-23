@@ -54,6 +54,7 @@
 		move_intent = decls_repository.get_decl(move_intent)
 	if (!isliving(src))
 		status_flags |= NOTARGET
+	set_focus(src)
 	START_PROCESSING_MOB(src)
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
@@ -224,6 +225,7 @@
 
 
 /mob/proc/Life()
+	set waitfor = FALSE
 	if(ability_master)
 		ability_master.update_spells(0)
 

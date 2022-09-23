@@ -65,6 +65,9 @@
 	if(modifiers["middle"])
 		MiddleClickOn(A)
 		return 1
+	if(modifiers["middle"] && modifiers["alt"])
+		AltMiddleClickOn(A)
+		return 1
 	if(modifiers["shift"])
 		ShiftClickOn(A)
 		return 0
@@ -234,7 +237,10 @@
  * - `A` - The atom that was clicked on.
  */
 /mob/proc/MiddleClickOn(atom/A)
-	swap_hand()
+	pointed(A)
+	return
+
+/mob/proc/AltMiddleClickOn(atom/A)
 	return
 
 // In case of use break glass
@@ -358,7 +364,6 @@
 /mob/proc/CtrlAltClickOn(atom/A)
 	if(A.CtrlAltClick(src))
 		return
-	pointed(A)
 
 /**
  * Called when a mob ctrl+alt+clicks on the atom.

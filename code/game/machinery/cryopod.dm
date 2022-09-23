@@ -555,7 +555,11 @@
 		occupant.client.eye = src.occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
 
-	occupant.dropInto(loc)
+	if(not_turf_contains_dense_objects(get_turf(get_step(loc, dir))))
+		occupant.dropInto(get_step(loc, dir))
+	else
+		occupant.dropInto(loc)
+
 	set_occupant(null)
 
 	icon_state = base_icon_state

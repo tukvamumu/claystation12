@@ -251,7 +251,10 @@
 	if(occupant.client)
 		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
-	occupant.dropInto(loc)
+	if(not_turf_contains_dense_objects(get_turf(get_step(loc, dir))))
+		occupant.dropInto(get_step(loc, dir))
+	else
+		occupant.dropInto(loc)
 	set_occupant(null)
 
 	for(var/obj/O in (contents - component_parts)) // In case an object was dropped inside or something. Excludes the beaker and component parts.
