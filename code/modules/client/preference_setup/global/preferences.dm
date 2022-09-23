@@ -207,6 +207,11 @@ var/global/list/_client_preferences_by_type
 	key = "BROWSER_STYLED"
 	options = list(GLOB.PREF_FANCY, GLOB.PREF_PLAIN)
 
+/datum/client_preference/floating_messages
+	description = "Floating chat messages"
+	key = "FLOATING_CHAT"
+	options = list(GLOB.PREF_HIDE, GLOB.PREF_SHOW)
+
 /datum/client_preference/autohiss
 	description = "Autohiss"
 	key = "AUTOHISS"
