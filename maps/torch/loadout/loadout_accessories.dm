@@ -263,6 +263,9 @@
 /datum/gear/accessory/ftu_pin
 	allowed_branches = CIVILIAN_BRANCHES
 
+/datum/gear/foundation_civilian
+	allowed_roles = list(/datum/job/psychiatrist)
+
 /*********************
  tactical accessories
 *********************/
@@ -272,6 +275,7 @@
 	allowed_roles = ARMORED_ROLES
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
+		/datum/mil_branch/solgov,
 		/datum/mil_branch/civilian
 	)
 

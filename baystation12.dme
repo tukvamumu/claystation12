@@ -10,6 +10,7 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
+#include "code\__spaceman_dmm.dm"
 #include "code\_macros.dm"
 #include "code\_version.dm"
 #include "code\hub.dm"
@@ -70,7 +71,6 @@
 #include "code\__defines\shields.dm"
 #include "code\__defines\shuttle.dm"
 #include "code\__defines\skills.dm"
-#include "code\__defines\spaceman_dmm.dm"
 #include "code\__defines\species.dm"
 #include "code\__defines\subsystem-priority.dm"
 #include "code\__defines\subsystems.dm"
@@ -348,6 +348,7 @@
 #include "code\datums\observation\exited.dm"
 #include "code\datums\observation\hands_swapped.dm"
 #include "code\datums\observation\helpers.dm"
+#include "code\datums\observation\instruments.dm"
 #include "code\datums\observation\life.dm"
 #include "code\datums\observation\logged_in.dm"
 #include "code\datums\observation\logged_out.dm"
