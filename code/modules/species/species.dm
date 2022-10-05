@@ -20,6 +20,12 @@
 	var/husk_icon =    'icons/mob/human_races/species/default_husk.dmi'
 	var/bandages_icon
 
+	/// The width of this species' icons.
+	var/icon_width = 32
+
+	/// The height of this species' icons.
+	var/icon_height = 32
+
 	// Damage overlay and masks.
 	var/damage_overlays = 'icons/mob/human_races/species/human/damage_overlay.dmi'
 	var/damage_mask =     'icons/mob/human_races/species/human/damage_mask.dmi'
@@ -114,7 +120,6 @@
 	var/limbs_are_nonsolid
 	var/spawns_with_stack = 0
 	// Environment tolerance/life processes vars.
-	var/reagent_tag                                             // Used for metabolizing reagents.
 	var/breath_pressure = 16                                    // Minimum partial pressure safe for breathing, kPa
 	var/breath_type = GAS_OXYGEN                                  // Non-oxygen gas breathed, if any.
 	var/poison_types = list(GAS_PHORON = TRUE, GAS_CHLORINE = TRUE) // Noticeably poisonous air - ie. updates the toxins indicator on the HUD.
@@ -250,6 +255,8 @@
 	var/list/additional_available_cultural_info = list()
 	var/max_players
 
+	var/list/default_emotes = list()
+
 	// Order matters, higher pain level should be higher up
 	var/list/pain_emotes_with_pain_level = list(
 		list(/decl/emote/audible/scream, /decl/emote/audible/whimper, /decl/emote/audible/moan, /decl/emote/audible/cry) = 70,
@@ -270,7 +277,7 @@
 	/// When being fed a reagent item, the amount this species eats per bite on help intent.
 	var/ingest_amount = 10
 
-	/// An associative list of /decl/traits and trait level - See individual traits for valid levels
+	/// An associative list of /decl/trait and trait level - See individual traits for valid levels
 	var/list/traits = list()
 /*
 These are all the things that can be adjusted for equipping stuff and
@@ -452,6 +459,8 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 	return
 
 /datum/species/proc/handle_post_spawn(mob/living/carbon/human/H) //Handles anything not already covered by basic species assignment.
+	H.icon_width = icon_width
+	H.icon_height = icon_height
 	add_inherent_verbs(H)
 	add_base_auras(H)
 	H.mob_bump_flag = bump_flag

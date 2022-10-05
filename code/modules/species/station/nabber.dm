@@ -30,13 +30,13 @@
 	flesh_color = "#525252"
 	blood_oxy = 0
 
-	reagent_tag = IS_NABBER
-
 	icon_template = 'icons/mob/human_races/species/template_tall.dmi'
 	icobase = 'icons/mob/human_races/species/nabber/body.dmi'
 	deform = 'icons/mob/human_races/species/nabber/body.dmi'
 	preview_icon = 'icons/mob/human_races/species/nabber/preview.dmi'
 	blood_mask = 'icons/mob/human_races/species/nabber/blood_mask.dmi'
+
+	icon_height = 40
 
 	limb_blend = ICON_MULTIPLY
 
@@ -155,6 +155,8 @@
 	)
 
 	ingest_amount = 6
+
+	traits = list(/decl/trait/general/serpentid_adapted = TRAIT_LEVEL_EXISTS)
 
 /datum/species/nabber/New()
 	equip_adjust = list(
