@@ -8,7 +8,6 @@
 	empty_levels = list(5)
 	accessible_z_levels = list("1"=1,"2"=3,"3"=1,"5"=30)
 
-
 	lobby_screens = list('maps/korch/lobby.png')
 	lobby_tracks = list(
 		/decl/audio/track/chasing_time,

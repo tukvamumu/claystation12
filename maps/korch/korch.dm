@@ -47,12 +47,12 @@
 	#include "job/supply_jobs.dm"
     #include "spawners.dm"
 	#include "korch_setup.dm"
-	#include "korch1.dmm"
-	#include "korch2.dmm"
-	#include "korch3.dmm"
+
+	#include "korch1-deck3.dmm"
+	#include "korch2-deck2.dmm"
+	#include "korch3-deck1.dmm"
 	#include "z1_admin.dmm"
 	#include "../away/empty.dmm"
-
 
 	#include "../away/mining/mining.dm"
 	#include "../away/derelict/derelict.dm"
