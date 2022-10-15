@@ -8,10 +8,16 @@ Synthetic
 	supervisors = "your laws"
 	minimal_player_age = 3
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/prop)
+
 /datum/job/ai
 	minimal_player_age = 7
 	total_positions = 0
 	spawn_positions = 0
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/prop)
 
 /*******
 Civilian
@@ -24,7 +30,7 @@ Civilian
 	supervisors = "the Head of Personnel"
 	economic_power = 6
 	announced = FALSE
-	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/korch/crew/passanger/counselor)
+	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/korch/crew/passanger/counselor, "Clown" = /decl/hierarchy/outfit/job/korch/passenger/clown)
 	outfit_type = /decl/hierarchy/outfit/job/korch/passenger/passenger
 	min_goals = 2
 	max_goals = 7
@@ -48,6 +54,7 @@ Civilian
 	                    SKILL_PILOT	  = SKILL_BASIC)
 
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
+	
 	skill_points = 24
 	required_language = null
 	give_psionic_implant_on_join = FALSE

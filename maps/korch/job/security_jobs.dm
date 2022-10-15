@@ -26,6 +26,9 @@
 		access_radio_sec
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/sec)
+
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
@@ -62,6 +65,9 @@
 		access_korch_fax, access_network, access_radio_sec
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/sec)
+
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
@@ -92,6 +98,9 @@
 		access_eva, access_sec_doors, access_nt_crew,
 		access_radio_sec
 	)
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/sec)
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)

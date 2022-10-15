@@ -14,6 +14,9 @@
 	                    SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 30
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/cap)
+
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/card_mod,
 							 /datum/computer_file/program/camera_monitor,
@@ -61,6 +64,9 @@
 		access_radio_comm, access_radio_eng, access_radio_med, access_radio_sec, access_radio_sup, access_radio_serv, access_radio_exp, access_radio_sci, access_research_storage
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/com)
+
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/card_mod,
 							 /datum/computer_file/program/camera_monitor,
@@ -101,6 +107,9 @@
 		access_radio_sci, access_radio_exp, access_research_storage
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/com)
+
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/aidiag,
 							 /datum/computer_file/program/camera_monitor,
@@ -126,7 +135,7 @@
 	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
 	                    SKILL_ANATOMY     = SKILL_MAX,
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
-	skill_points = 26
+	skill_points = 24
 
 	access = list(
 		access_medical, access_morgue, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
@@ -136,6 +145,9 @@
 		access_medical_equip, access_nt_crew, access_hangar, access_korch_fax, access_radio_comm,
 		access_radio_med
 	)
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/com)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/suit_sensors,
@@ -165,7 +177,7 @@
 	                    SKILL_ELECTRICAL   = SKILL_MAX,
 	                    SKILL_ATMOS        = SKILL_MAX,
 	                    SKILL_ENGINES      = SKILL_MAX)
-	skill_points = 30
+	skill_points = 26
 
 	access = list(
 		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
@@ -175,6 +187,9 @@
 		access_nt_crew, access_hangar, access_korch_fax, access_korch_helm, access_radio_comm,
 		access_radio_eng
 		)
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/com)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/ntnetmonitor,
@@ -218,6 +233,9 @@
 		access_radio_comm, access_radio_sec
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/com)
+
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor,
@@ -254,6 +272,10 @@
 		access_eva, access_hangar, access_cent_creed, access_explorer, access_expedition_shuttle, access_expedition_shuttle_helm, access_teleporter,
 		access_korch_fax, access_korch_helm, access_radio_comm, access_radio_eng, access_radio_exp, access_radio_serv, access_radio_sci, access_radio_sup
 	)
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
+
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/suit_sensors,

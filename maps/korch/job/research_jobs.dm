@@ -42,3 +42,5 @@
 	skill_points = 20
 	possible_goals = list(/datum/goal/achievement/notslimefodder)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)

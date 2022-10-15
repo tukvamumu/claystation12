@@ -16,6 +16,9 @@
 		access_radio_serv
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
+
 /datum/job/janitor
 	title = "Sanitation Technician"
 	department = "Service"
@@ -36,6 +39,8 @@
 		access_radio_serv
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
 
 /datum/job/chef
 	title = "Cook"
@@ -63,3 +68,6 @@
 		access_radio_serv,
 		access_nt_crew
 	)
+	
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)

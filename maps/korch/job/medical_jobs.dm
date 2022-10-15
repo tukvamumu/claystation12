@@ -1,4 +1,4 @@
-/datum/job/medical_doctor
+/datum/job/medic_doctor
 	title = "Medical Doctor"
 	department = "Medical"
 	department_flag = MED
@@ -26,10 +26,13 @@
 		access_medical_equip, access_nt_crew, access_radio_med
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
+
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
 
-/datum/job/medical_doctor/get_description_blurb()
+/datum/job/medic_doctor/get_description_blurb()
 	return "You are a MD. Your job is to treat wounded crewmembers. You are expected to have a good medical knowledge. You are subordinate to CMO."
 
 /datum/job/paramedic
@@ -65,6 +68,9 @@
 							 /datum/computer_file/program/camera_monitor)
 	skill_points = 22
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
+
 /datum/job/paramedic/get_description_blurb()
 	return "You are a paramedic. Your job is to monitor suit sensors and deliver wounded crew to the medbay. You are subordinate to CMO."
 
@@ -84,7 +90,7 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/korch/crew/medical/doctor
 
-	skill_points = 8
+	skill_points = 12
 	no_skill_buffs = TRUE
 
 	min_skill = list(   SKILL_EVA     = SKILL_ADEPT,
@@ -102,6 +108,9 @@
 		access_surgery, access_medical_equip, access_nt_crew,
 		access_radio_med
 	)
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
@@ -138,6 +147,9 @@
 		access_medical_equip, access_nt_crew, access_chemistry,
 	 	access_virology, access_morgue, access_crematorium, access_radio_med
 	)
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
 
 /datum/job/chemist/get_description_blurb()
 	return "You are the Pharmacist. You make medicine and other useful substances. You are not a doctor or medic; you should not be treating patients, but rather providing the medicine to do so. You are subordinate to Medical Doctors and the CMO."

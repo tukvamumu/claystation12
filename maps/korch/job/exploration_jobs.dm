@@ -29,6 +29,9 @@
 		access_petrov_toxins, access_petrov_chemistry, access_petrov_maint, access_tox, access_tox_storage, access_research,
 		access_xenobiology, access_xenoarch, access_korch_fax, access_radio_comm, access_radio_exp, access_radio_sci, access_research_storage
 	)
+	
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
 
 	software_on_spawn = list(/datum/computer_file/program/deck_management,
 							 /datum/computer_file/program/reports)
@@ -62,6 +65,9 @@
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX,
 	                    SKILL_SCIENCE     = SKILL_MAX)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
+
 /datum/job/explorer
 	title = "Explorer"
 	department = "Exploration"
@@ -85,6 +91,9 @@
 		access_guppy_helm, access_nt_crew, access_expedition_shuttle, access_guppy, access_hangar,
 		access_petrov, access_petrov_maint, access_research, access_radio_exp
 	)
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
 
 	software_on_spawn = list(/datum/computer_file/program/deck_management)
 

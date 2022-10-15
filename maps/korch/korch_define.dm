@@ -2,6 +2,7 @@
 	name = "Korch"
 	full_name = "NSV Korch"
 	path = "korch"
+	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 
 	station_levels = list(1, 2, 3)
 	admin_levels = list(4)
@@ -64,4 +65,4 @@
 
 	evac_controller_type = /datum/evacuation_controller/starship
 
-	id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
+	id_hud_icons = 'maps/korch/icons/assignment_hud.dmi'

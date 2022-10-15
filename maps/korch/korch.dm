@@ -5,6 +5,7 @@
 	#include "areas/korch3.dm"
 	#include "areas/shuttles.dm"
 	#include "korch_shuttles.dm"
+	#include "korch_ranks.dm"
 
 	#include "datums/department_exploration.dm"
 	#include "items/machinery.dm"

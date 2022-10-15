@@ -4,7 +4,7 @@
 										/datum/job/engineer, /datum/job/roboticist, /datum/job/chemist, /datum/job/scientist, /datum/job/nt_pilot,
 										/datum/job/mining),
 		/datum/species/nabber = list(/datum/job/ai, /datum/job/cyborg, /datum/job/janitor, /datum/job/chemist,
-									 /datum/job/roboticist, /datum/job/cargo_tech, /datum/job/chef, /datum/job/engineer, /datum/job/doctor),
+									 /datum/job/roboticist, /datum/job/cargo_tech, /datum/job/chef, /datum/job/engineer, /datum/job/medic_doctor),
 		/datum/species/vox = list(/datum/job/ai, /datum/job/cyborg),
 		/datum/species/human/mule = list(/datum/job/ai, /datum/job/cyborg, /datum/job/merchant)
 	)
@@ -15,7 +15,7 @@
 		/datum/species/unathi/yeosa = list(HUMAN_ONLY_JOBS, /datum/job/warden),
 		/datum/species/skrell  = list(HUMAN_ONLY_JOBS),
 		/datum/species/machine = list(HUMAN_ONLY_JOBS, /datum/job/psychiatrist, /datum/job/bridgestaff, /datum/job/warden, /datum/job/qm),
-		/datum/species/diona   = list(HUMAN_ONLY_JOBS, /datum/job/officer, /datum/job/warden, /datum/job/doctor, /datum/job/medical_trainee),	//Other jobs unavailable via branch restrictions,
+		/datum/species/diona   = list(HUMAN_ONLY_JOBS, /datum/job/officer, /datum/job/warden, /datum/job/medic_doctor, /datum/job/medical_trainee),	//Other jobs unavailable via branch restrictions,
 	)
 #undef HUMAN_ONLY_JOBS
 
@@ -23,7 +23,7 @@
 						/datum/job/bridgeofficer, /datum/job/pathfinder, /datum/job/nt_pilot, /datum/job/explorer,
 						/datum/job/engineer, /datum/job/roboticist,
 						/datum/job/officer, /datum/job/warden, /datum/job/detective,
-						/datum/job/doctor, /datum/job/chemist, /datum/job/medical_trainee,
+						/datum/job/medic_doctor, /datum/job/chemist, /datum/job/medical_trainee,
 						/datum/job/chaplain,
 						/datum/job/qm, /datum/job/cargo_tech, /datum/job/mining,
 						/datum/job/janitor, /datum/job/chef,
@@ -68,7 +68,7 @@
 	..()
 
 /decl/cultural_info/culture/nabber/a/plus/New()
-	LAZYADD(valid_jobs, /datum/job/doctor)
+	LAZYADD(valid_jobs, /datum/job/medic_doctor)
 	..()
 
 /datum/job

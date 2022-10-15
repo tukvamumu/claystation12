@@ -27,6 +27,9 @@
 		access_radio_sup, access_radio_exp, access_radio_comm
 	)
 
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
+
 	software_on_spawn = list(/datum/computer_file/program/supply,
 							 /datum/computer_file/program/deck_management,
 							 /datum/computer_file/program/reports)
@@ -53,6 +56,9 @@
 		access_cargo_bot, access_mailsorting, access_nt_crew, access_expedition_shuttle,
 		access_guppy, access_hangar, access_commissary, access_radio_sup
 	)
+
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)
 
 	software_on_spawn = list(/datum/computer_file/program/supply,
 							 /datum/computer_file/program/deck_management,
@@ -84,3 +90,6 @@
 		access_guppy_helm, access_nt_crew, access_eva,
 		access_radio_exp, access_radio_sup
 	)
+	
+	allowed_branches = list(/datum/mil_branch/nanotrasen)
+	allowed_ranks = list(/datum/mil_rank/nt/empl)

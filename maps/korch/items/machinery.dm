@@ -89,4 +89,4 @@
 		/obj/item/device/holowarrant = 4,
 		/obj/item/reagent_containers/food/snacks/donut/normal = 12,
 		/obj/item/storage/box/evidence = 8,
-		/obj/item/clothing/accessory/badge/holo/NT/cord = 6)
+		/obj/item/clothing/accessory/badge/holo/cord = 6)
