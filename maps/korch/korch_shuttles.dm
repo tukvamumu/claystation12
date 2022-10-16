@@ -1,3 +1,48 @@
+//Some helpers because so much copypasta for pods
+/datum/shuttle/autodock/ferry/escape_pod/korchpod
+	category = /datum/shuttle/autodock/ferry/escape_pod/korchpod
+	sound_takeoff = 'sound/effects/rocket.ogg'
+	sound_landing = 'sound/effects/rocket_backwards.ogg'
+	warmup_time = 10
+
+/obj/effect/shuttle_landmark/escape_pod/start
+	name = "Docked"
+	base_turf = /turf/simulated/floor/reinforced/airless
+
+/obj/effect/shuttle_landmark/escape_pod/transit
+	name = "In transit"
+
+/obj/effect/shuttle_landmark/escape_pod/out
+	name = "Escaped"
+
+//Pods
+#define KORCH_ESCAPE_POD(NUMBER) \
+/datum/shuttle/autodock/ferry/escape_pod/korchpod/escape_pod##NUMBER { \
+	shuttle_area = /area/shuttle/escape_pod##NUMBER/station; \
+	name = "Escape Pod " + #NUMBER; \
+	dock_target = "escape_pod_" + #NUMBER; \
+	arming_controller = "escape_pod_"+ #NUMBER +"_berth"; \
+	waypoint_station = "escape_pod_"+ #NUMBER +"_start"; \
+	landmark_transition = "escape_pod_"+ #NUMBER +"_internim"; \
+	waypoint_offsite = "escape_pod_"+ #NUMBER +"_out"; \
+} \
+/obj/effect/shuttle_landmark/escape_pod/start/pod##NUMBER { \
+	landmark_tag = "escape_pod_"+ #NUMBER +"_start"; \
+	docking_controller = "escape_pod_"+ #NUMBER +"_berth"; \
+} \
+/obj/effect/shuttle_landmark/escape_pod/out/pod##NUMBER { \
+	landmark_tag = "escape_pod_"+ #NUMBER +"_out"; \
+} \
+/obj/effect/shuttle_landmark/escape_pod/transit/pod##NUMBER { \
+	landmark_tag = "escape_pod_"+ #NUMBER +"_internim"; \
+}
+
+
+KORCH_ESCAPE_POD(1)
+KORCH_ESCAPE_POD(2)
+KORCH_ESCAPE_POD(3)
+KORCH_ESCAPE_POD(4)
+
 /datum/shuttle/autodock/ferry/petrov
 	name = "Petrov"
 	warmup_time = 10
@@ -52,7 +97,7 @@
 	name = "Space near Third Deck"
 	landmark_tag = "nav_deck3_charon"
 
-/obj/effect/shuttle_landmark/transit/torch/exploration_shuttle
+/obj/effect/shuttle_landmark/transit/korch/exploration_shuttle
 	name = "In transit"
 	landmark_tag = "nav_transit_charon"
 
@@ -89,6 +134,10 @@
 /obj/effect/shuttle_landmark/korch/deck3/guppy
 	name = "Space near Third Deck"
 	landmark_tag = "nav_deck3_guppy"
+
+/obj/effect/shuttle_landmark/transit/korch/guppy
+	name = "In transit"
+	landmark_tag = "nav_transit_guppy"
 
 /obj/effect/shuttle_landmark/ert/hanger
 	name =  "Southeast of Hanger deck"

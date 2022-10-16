@@ -1,3 +1,30 @@
+//Merchant
+
+/area/shuttle/merchant/home
+	name = "\improper Merchant Vessel"
+	icon_state = "shuttlegrn"
+	req_access = list(access_merchant)
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
+//Escape
+
+/area/shuttle/escape_pod1/station
+	name = "Shuttle - Escape - Pod One"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+
+
+/area/shuttle/escape_pod2/station
+	name = "Shuttle - Escape - Pod Two"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/shuttle/escape_pod3/station
+	name = "Shuttle - Escape - Pod Three"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/shuttle/escape_pod4/station
+	name = "Shuttle - Escape - Pod Four"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+
 //Charon
 
 /area/exploration_shuttle

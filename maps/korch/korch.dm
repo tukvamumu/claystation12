@@ -3,6 +3,7 @@
 	#include "areas/korch1.dm"
 	#include "areas/korch2.dm"
 	#include "areas/korch3.dm"
+	#include "areas/centcom.dm"
 	#include "areas/shuttles.dm"
 	#include "korch_shuttles.dm"
 	#include "korch_ranks.dm"
@@ -47,12 +48,14 @@
 	#include "job/service_jobs.dm"
 	#include "job/supply_jobs.dm"
     #include "spawners.dm"
+    #include "korch_announcements.dm"
 	#include "korch_setup.dm"
 
 	#include "korch1-deck3.dmm"
 	#include "korch2-deck2.dmm"
 	#include "korch3-deck1.dmm"
 	#include "z1_admin.dmm"
+	#include "z2_transit.dmm"
 	#include "../away/empty.dmm"
 
 	#include "../away/mining/mining.dm"

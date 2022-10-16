@@ -30,7 +30,7 @@
 	detail_color = COLOR_PALE_BLUE_GRAY
 
 /obj/item/card/id/korch/crew/medical
-	job_access_type = /datum/job/doctor
+	job_access_type = /datum/job/medic_doctor
 	detail_color = COLOR_PALE_BLUE_GRAY
 
 /obj/item/card/id/korch/crew/medical/chemist

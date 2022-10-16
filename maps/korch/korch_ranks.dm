@@ -72,6 +72,7 @@
 										 /datum/mil_branch/civilian)
 	)
 
+
 	species_to_rank_whitelist = list(
 		/datum/species/vox = list(
 			/datum/mil_branch/alien = list(
@@ -149,27 +150,27 @@
 	name_short = null
 
 /datum/mil_rank/nt/empl
-	name = "NanoTrasen Employee"
+	name = "NT Employee"
 
 /datum/mil_rank/nt/sec
-	name = "NanoTrasen Security"
+	name = "NT Security"
 	accessory = list(/obj/item/clothing/accessory/badge/holo/cord)
 
 
 /datum/mil_rank/nt/com
-	name = "NanoTrasen Command"
+	name = "NT Command"
 	accessory = list(/obj/item/clothing/accessory/badge/nanotrasen)
 
 
 /datum/mil_rank/nt/cap
-	name = "NanoTrasen Captain"
+	name = "NT Captain"
 	accessory = list(/obj/item/clothing/accessory/medal/gold/nanotrasen)
 
 /datum/mil_rank/civ/offduty
 	name = "Off-Duty Personnel"
 
 /datum/mil_rank/nt/prop
-	name = "NanoTrasen Property"
+	name = "NT Property"
 
 /*
  * Vox/foreign alien branch

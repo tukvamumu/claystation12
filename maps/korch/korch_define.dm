@@ -6,7 +6,8 @@
 
 	station_levels = list(1, 2, 3)
 	admin_levels = list(4)
-	empty_levels = list(5)
+	escape_levels = list(5)
+	empty_levels = list(6)
 	accessible_z_levels = list("1"=1,"2"=3,"3"=1,"5"=30)
 
 	lobby_screens = list('maps/korch/lobby.png')
@@ -58,11 +59,12 @@
 	planet_size = list(129,129)
 
 	map_admin_faxes = list("NanoTrasen Central Office")
-	shuttle_docked_message = "Attention all hands: Jump preparation complete. The bluespace drive is now spooling up, secure all stations for departure. Time to jump: approximately %ETD%."
-	shuttle_leaving_dock = "Attention all hands: Jump initiated, exiting bluespace in %ETA%."
-	shuttle_called_message = "Attention all hands: Jump sequence initiated. Transit procedures are now in effect. Jump in %ETA%."
-	shuttle_recall_message = "Attention all hands: Jump sequence aborted, return to normal operating conditions."
 
-	evac_controller_type = /datum/evacuation_controller/starship
+	shuttle_docked_message = "Attention all hands: Evacuation preparation complete. Time before departure: approximately %ETD%."
+	shuttle_leaving_dock = "Attention all hands: the escape pods have been launched, arriving at rendezvous point in %ETA%."
+	shuttle_called_message = "Attention all hands: evacuation procedures are now in effect. Escape pods will unlock in %ETA%"
+	shuttle_recall_message = "Attention all hands: evacuation aborted, return to normal operating conditions."
+
+	evac_controller_type = /datum/evacuation_controller/lifepods
 
 	id_hud_icons = 'maps/korch/icons/assignment_hud.dmi'
