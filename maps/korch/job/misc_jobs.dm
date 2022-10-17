@@ -41,14 +41,14 @@ Civilian
 	department_flag = CIV
 	total_positions = 1
 	spawn_positions = 1
-	availablity_chance = 30
+	availablity_chance = 100
 	supervisors = "the invisible hand of the market"
 	ideal_character_age = 30
 	minimal_player_age = 0
 	create_record = 0
 	outfit_type = /decl/hierarchy/outfit/job/korch/merchant
 	latejoin_at_spawnpoints = 1
-	access = list(access_merchant)
+	access = list(access_merchant, access_external_airlocks)
 	announced = FALSE
 	min_skill = list(   SKILL_FINANCE = SKILL_ADEPT,
 	                    SKILL_PILOT	  = SKILL_BASIC)
@@ -58,3 +58,6 @@ Civilian
 	skill_points = 24
 	required_language = null
 	give_psionic_implant_on_join = FALSE
+
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/civ)

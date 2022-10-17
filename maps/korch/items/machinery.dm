@@ -45,13 +45,21 @@
 	name = "Exploration suit cycler"
 	model_text = "Exploration"
 	req_access = list(access_explorer)
-	available_modifications = list(/decl/item_modifier/space_suit/explorer)
+	available_modifications = list(/decl/item_modifier/space_suit/mining)
 	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+
+/obj/item/clothing/suit/space/void/explorer
+	name = "Exploration Voidsuit"
+	desc = "Voidsuit used by the exploration team"
+
+/obj/item/clothing/head/helmet/space/void/explorer
+	name = "Exploration Voidsuit Helmet"
+	desc = "Voidsuit used by the exploration team"
 
 /obj/machinery/suit_storage_unit/explorer
 	name = "Exploration Voidsuit Storage Unit"
-	suit = /obj/item/clothing/suit/space/void/excavation
-	helmet = /obj/item/clothing/head/helmet/space/void/excavation
+	suit = /obj/item/clothing/suit/space/void/explorer
+	helmet = /obj/item/clothing/head/helmet/space/void/explorer
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
@@ -70,13 +78,14 @@
 
 /obj/machinery/suit_storage_unit/command
 	name = "Command Voidsuit Storage Unit"
-	suit = /obj/item/clothing/suit/space/void/atmos/alt
-	helmet = /obj/item/clothing/head/helmet/space/void/atmos/alt
+	suit = /obj/item/clothing/suit/space/syndicate/black
+	helmet = /obj/item/clothing/head/helmet/space/syndicate/black
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
 	req_access = list(access_bridge, access_keycard_auth)
 	islocked = 1
+
 
 // Vending machines & dispensers
 /obj/machinery/vending/security

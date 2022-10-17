@@ -1,21 +1,11 @@
 /decl/hierarchy/outfit/job/korch/crew/exploration/New()
 	..()
-	backpack_overrides[/decl/backpack_outfit/backpack]      = /obj/item/storage/backpack/explorer
-	backpack_overrides[/decl/backpack_outfit/satchel]       = /obj/item/storage/backpack/satchel/explorer
-	backpack_overrides[/decl/backpack_outfit/messenger_bag] = /obj/item/storage/backpack/messenger/explorer
-
-/decl/hierarchy/outfit/job/korch/crew/exploration/pathfinder
-	name = OUTFIT_JOB_NAME("Pathfinder")
-	uniform = /obj/item/clothing/under/rank/scientist/executive/nanotrasen
-	shoes = /obj/item/clothing/shoes/laceup
-	id_types = list(/obj/item/card/id/korch/crew/pathfinder)
-	pda_type = /obj/item/modular_computer/pda/explorer
-	l_ear = /obj/item/device/radio/headset/pathfinder
+	BACKPACK_OVERRIDE_ENGINEERING
 
 /decl/hierarchy/outfit/job/korch/crew/exploration/explorer
 	name = OUTFIT_JOB_NAME("NanoTrasen Research Explorer")
-	uniform = /obj/item/clothing/under/rank/scientist_new
-	shoes = /obj/item/clothing/shoes/dutyboots
+	uniform = /obj/item/clothing/under/rank/ntwork/nanotrasen
+	shoes = /obj/item/clothing/shoes/workboots
 	id_types = list(/obj/item/card/id/korch/crew/explorer)
 	pda_type = /obj/item/modular_computer/pda/explorer
 	l_ear = /obj/item/device/radio/headset/exploration

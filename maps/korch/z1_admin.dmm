@@ -7785,8 +7785,11 @@
 	name = "Wardrobe"
 	},
 /obj/item/clothing/shoes/black,
-/obj/item/clothing/under/overalls,
 /obj/item/clothing/under/skirt,
+/obj/item/clothing/accessory/tunic/exec,
+/obj/item/clothing/under/suit_jacket/female,
+/obj/item/clothing/under/suit_jacket/navy,
+/obj/item/clothing/under/suit_jacket/tan,
 /turf/simulated/floor/carpet/blue,
 /area/merchant_station)
 "aMF" = (
@@ -8180,7 +8183,6 @@
 /area/merchant_station)
 "aNW" = (
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor/wood,
@@ -8226,6 +8228,7 @@
 	req_access = list("ACCESS_MERCHANT")
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/voidhelmet,
 /turf/simulated/floor/tiled/dark,
 /area/merchant_station)
 "aOd" = (
@@ -8238,11 +8241,13 @@
 "aOe" = (
 /obj/structure/closet/crate/freezer,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/dark,
 /area/merchant_station)
 "aOf" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/glasses,
 /turf/simulated/floor/tiled/dark,
 /area/merchant_station)
 "aOg" = (
@@ -8538,6 +8543,9 @@
 "aPn" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
+	},
+/obj/machinery/atm{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/merchant_station)
@@ -8907,6 +8915,7 @@
 	icon_state = "guest";
 	name = "Visitor's Card - Merchant's Station"
 	},
+/obj/item/clothing/suit/ianshirt,
 /turf/simulated/floor/tiled/dark,
 /area/merchant_station)
 "aQp" = (
@@ -9099,21 +9108,15 @@
 /area/merchant_station)
 "aRA" = (
 /obj/effect/paint/silver,
-/turf/simulated/wall/r_titanium,
-/area/shuttle/merchant/home)
-"aRB" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 4
-	},
-/obj/effect/paint/silver,
+/obj/effect/paint/ocean,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/merchant/home)
 "aRC" = (
-/obj/structure/shuttle/engine/propulsion/burst/right{
+/obj/structure/shuttle/engine/propulsion/burst/left{
 	dir = 4;
 	name = "propulsion"
 	},
-/turf/space,
+/turf/simulated/floor/plating,
 /area/shuttle/merchant/home)
 "aRD" = (
 /obj/structure/disposalpipe/segment{
@@ -9246,6 +9249,9 @@
 /area/shuttle/merchant/home)
 "aSm" = (
 /obj/structure/flora/pottedplant/minitree,
+/obj/machinery/atm{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/shuttle/merchant/home)
 "aSn" = (
@@ -9335,21 +9341,11 @@
 /turf/simulated/floor/wood,
 /area/shuttle/merchant/home)
 "aSD" = (
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "merchant_ship_dock";
-	pixel_x = -24;
-	tag_airpump = "merchant_ship_vent";
-	tag_chamber_sensor = "merchant_ship_sensor";
-	tag_exterior_door = "merchant_ship_exterior";
-	tag_interior_door = "merchant_ship_interior"
-	},
+/obj/structure/closet/crate,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/voidsuit,
 /turf/simulated/floor/tiled/dark,
-/area/shuttle/merchant/home)
+/area/merchant_station)
 "aSE" = (
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/merchant/home)
@@ -9385,6 +9381,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/corner/green{
 	dir = 5
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "merchant_ship_dock";
+	pixel_x = 24;
+	tag_airpump = "merchant_ship_vent";
+	tag_chamber_sensor = "merchant_ship_sensor";
+	tag_exterior_door = "merchant_ship_exterior";
+	tag_interior_door = "merchant_ship_interior";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/merchant/home)
@@ -9781,6 +9787,7 @@
 	pixel_x = -28
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/shuttle_landmark/merchant/start,
 /turf/simulated/floor/plating,
 /area/shuttle/merchant/home)
 "aTZ" = (
@@ -9881,7 +9888,6 @@
 /area/merchant_station)
 "aUi" = (
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
@@ -9908,11 +9914,11 @@
 /turf/simulated/floor/plating,
 /area/merchant_station)
 "aUv" = (
-/obj/structure/shuttle/engine/propulsion/burst/left{
-	dir = 4;
-	name = "propulsion"
+/obj/effect/paint/ocean,
+/obj/structure/shuttle/engine/heater{
+	dir = 4
 	},
-/turf/space,
+/turf/simulated/wall/r_titanium,
 /area/shuttle/merchant/home)
 "aUw" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
@@ -10049,7 +10055,6 @@
 	dir = 1
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
@@ -10234,6 +10239,8 @@
 /area/merchant_station)
 "aVv" = (
 /obj/structure/table/rack,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/h_chocolate,
 /turf/simulated/floor/tiled,
 /area/merchant_station)
 "aVw" = (
@@ -11234,6 +11241,11 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"geX" = (
+/mob/living/exosuit/premade/firefighter,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled,
+/area/shuttle/merchant/home)
 "glo" = (
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_volleyball)
@@ -11256,6 +11268,15 @@
 	icon_state = "wood_broken4"
 	},
 /area/holodeck/source_temple)
+"hyL" = (
+/obj/structure/closet/secure_closet{
+	name = "merchant's locker";
+	req_access = list("ACCESS_MERCHANT")
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/shoes,
+/turf/simulated/floor/tiled/dark,
+/area/merchant_station)
 "hzB" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -11277,6 +11298,12 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"ifl" = (
+/obj/machinery/door/window/brigdoor/northleft,
+/obj/structure/table/rack,
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
+/turf/simulated/floor/tiled,
+/area/shuttle/merchant/home)
 "ikd" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/effect/paint/silver,
@@ -11298,6 +11325,12 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"iCl" = (
+/obj/machinery/door/window/brigdoor/northleft,
+/obj/structure/table/rack,
+/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,
+/turf/simulated/floor/tiled,
+/area/shuttle/merchant/home)
 "iIc" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -11438,6 +11471,15 @@
 	},
 /turf/simulated/floor/holofloor/tiled/stone,
 /area/holodeck/source_temple)
+"lCB" = (
+/obj/structure/closet/secure_closet{
+	name = "merchant's locker";
+	req_access = list("ACCESS_MERCHANT")
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/storage/wallet/random,
+/turf/simulated/floor/tiled/dark,
+/area/merchant_station)
 "lGk" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /turf/unsimulated/floor/plating,
@@ -11557,6 +11599,12 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"noF" = (
+/obj/machinery/door/window/brigdoor/northright,
+/obj/structure/table/rack,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard,
+/turf/simulated/floor/tiled,
+/area/shuttle/merchant/home)
 "ntZ" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -11638,6 +11686,10 @@
 /obj/structure/table/holo_woodentable,
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"pBw" = (
+/obj/effect/step_trigger/thrower,
+/turf/space,
+/area/space)
 "pEp" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced,
@@ -11746,6 +11798,11 @@
 	icon_state = "desert2"
 	},
 /area/holodeck/source_temple)
+"rYO" = (
+/obj/structure/table/rack,
+/obj/item/flame/lighter/zippo/random,
+/turf/simulated/floor/tiled,
+/area/merchant_station)
 "skD" = (
 /obj/effect/floor_decal/beach{
 	dir = 8
@@ -11935,6 +11992,10 @@
 "wDD" = (
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_temple)
+"wVI" = (
+/obj/effect/paint/ocean,
+/turf/simulated/wall/r_titanium,
+/area/shuttle/merchant/home)
 "xqW" = (
 /obj/structure/bed/chair/wood{
 	holographic = 1
@@ -17057,30 +17118,30 @@ aab
 aab
 aLW
 aLW
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
+pBw
 aLF
 aab
 aab
@@ -18275,11 +18336,11 @@ aOw
 aMf
 aab
 aab
-aRA
+wVI
 aSy
 aSy
 aSy
-aRA
+wVI
 aab
 aab
 aab
@@ -19083,11 +19144,11 @@ aQI
 aOw
 aab
 aab
-aRA
+wVI
 aSC
 aTe
 aTy
-aRA
+wVI
 aab
 aab
 aab
@@ -19284,13 +19345,13 @@ aPX
 aMf
 aMf
 aRm
-aRA
-aRA
-aRA
+wVI
+wVI
+wVI
 aTf
-aRA
-aRA
-aRA
+wVI
+wVI
+wVI
 aab
 aab
 aab
@@ -19486,13 +19547,13 @@ aPY
 aMf
 aab
 aab
-aRA
+wVI
 aSh
-aSD
+aTA
 aSE
 aTA
 btb
-aRA
+wVI
 aab
 aab
 aVk
@@ -19687,15 +19748,15 @@ aNU
 aPY
 aOw
 aab
-aRA
-aRA
+aab
+wVI
 aSh
 aSE
 aSE
 aSE
 aTQ
-aRA
-aRA
+wVI
+aab
 aab
 aab
 aab
@@ -19889,15 +19950,15 @@ aPh
 aPZ
 aOw
 aab
-aRB
-aRA
+aab
+wVI
 aSh
 aSE
 aTg
 aTB
 aTR
-aRA
-aRB
+wVI
+aab
 aab
 aab
 aab
@@ -20091,15 +20152,15 @@ aNU
 aQa
 aOw
 aab
-aRC
-aRA
-aRA
+aab
+wVI
+wVI
 aSF
 aTh
 aTC
-aRA
-aRA
-aUv
+wVI
+wVI
+aab
 aab
 avD
 avD
@@ -20295,7 +20356,7 @@ aOw
 aab
 aab
 aRU
-aSj
+geX
 aSG
 aTi
 aTD
@@ -20698,13 +20759,13 @@ aQd
 aOw
 aRm
 aab
-aRA
+wVI
 aSj
 aSH
 aTk
 aTF
 aSk
-aRA
+wVI
 aab
 avD
 czt
@@ -20900,13 +20961,13 @@ aQe
 aMf
 aab
 aab
-aRA
+wVI
 aSj
 aSH
 aTk
 aTE
-aTT
-aRA
+iCl
+wVI
 avD
 avD
 czt
@@ -21102,13 +21163,13 @@ aQf
 aMf
 aRn
 aab
-aRA
+wVI
 aSk
 aSI
 aTk
 aTE
-aTU
-aRA
+noF
+wVI
 aRn
 czt
 czt
@@ -21304,13 +21365,13 @@ aQg
 aQJ
 aOw
 aab
-aRA
+wVI
 aSl
 aSH
 aTj
 aTF
 aSk
-aRA
+wVI
 aMf
 aUP
 aVl
@@ -21506,13 +21567,13 @@ aPc
 aQK
 aOw
 aab
-aRA
+wVI
 aSm
 aSH
 aTj
 aTE
-aTT
-aRA
+ifl
+wVI
 aMf
 aUQ
 aVm
@@ -21708,13 +21769,13 @@ aPc
 aQK
 aOw
 aab
-aRA
+aUv
 aSn
 aSJ
 aTl
 aTE
 aTX
-aRA
+aUv
 aMf
 aUR
 aVn
@@ -21910,13 +21971,13 @@ aPc
 aQK
 aOw
 aab
+aRC
+wVI
 aRA
-aRA
-ikd
 aTm
 ikd
-aRA
-aRA
+wVI
+aRC
 aMf
 aUS
 aVo
@@ -22113,11 +22174,11 @@ aQK
 aOw
 aOw
 aab
-aRA
+wVI
 psv
 aTn
 aSK
-aRA
+wVI
 aMf
 aMf
 aMf
@@ -22315,7 +22376,7 @@ aQK
 aPc
 aOw
 aab
-aRA
+wVI
 aSL
 aTo
 aTH
@@ -22517,11 +22578,11 @@ aQL
 aRo
 aOw
 aab
-aRA
-aRA
-aRA
-aRA
-aRA
+wVI
+wVI
+wVI
+wVI
+wVI
 aMf
 aUx
 pEp
@@ -23519,8 +23580,8 @@ aMg
 aMK
 aMg
 aNC
-aOc
-aOc
+hyL
+lCB
 aOc
 aNC
 aNC
@@ -24125,7 +24186,7 @@ aLW
 aLW
 aLW
 aNC
-aOf
+aSD
 aOf
 aPq
 aQp
@@ -24343,7 +24404,7 @@ aUd
 aPc
 aPc
 aUY
-aVv
+rYO
 aVR
 aWo
 aMf

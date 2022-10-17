@@ -27,6 +27,7 @@
 	#include "items/mecha.dm"
 	#include "items/weapons.dm"
 	#include "structures/signs.dm"
+	#include "structures/closets.dm"
 	#include "job/korch_access.dm"
 	#include "job/korch_jobs.dm"
 	#include "job/outfits/command_outfits.dm"

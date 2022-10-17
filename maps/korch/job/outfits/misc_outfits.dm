@@ -19,8 +19,8 @@
 /decl/hierarchy/outfit/job/korch/merchant
 	name = OUTFIT_JOB_NAME("Merchant - Korch")
 	uniform = /obj/item/clothing/under/color/black
-	l_ear = null
 	shoes = /obj/item/clothing/shoes/black
+	l_ear = /obj/item/device/radio/headset
 	pda_type = /obj/item/modular_computer/pda
 	id_types = list(/obj/item/card/id/korch/merchant)
 

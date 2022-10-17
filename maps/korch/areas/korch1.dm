@@ -64,27 +64,25 @@
 	icon_state = "quart"
 	req_access = list(access_qm)
 
+/area/quartermaster/mining
+	name = "\improper Mining Preparation"
+	icon_state = "mining"
+	req_access = list(access_mining)
+
+/area/quartermaster/mining/eva
+	name = "\improper Mining EVA"
+	icon_state = "mining"
+	req_access = list(access_mining, access_xenoarch)
+
+/area/quartermaster/expedition/storage
+	name = "\improper Hangar Storage"
+	icon_state = "mining"
+	req_access = list(access_mining, access_explorer, access_xenoarch)
+
 /area/quartermaster/expedition
 	name = "\improper Expedition Preparation"
 	icon_state = "mining"
-	req_access = list(list(access_mining, access_nanotrasen, access_xenoarch))
-
-/area/quartermaster/expedition/eva
-	name = "\improper Expedition EVA"
-	icon_state = "mining"
-	req_access = list(list(access_mining, access_xenoarch))
-
-/area/quartermaster/expedition/storage
-	name = "\improper Hangar Expedition Storage"
-	icon_state = "mining"
-	req_access = list(list(access_mining, access_explorer, access_xenoarch))
-
-/area/command/pathfinder
-	name = "\improper Pathfinder's Office"
-	icon_state = "pathfinder_office"
-	sound_env = MEDIUM_SOFTFLOOR
-	req_access = list(access_pathfinder)
-	holomap_color = HOLOMAP_AREACOLOR_EXPLORATION
+	req_access = list(access_explorer)
 
 /area/command/pilot
 	name = "\improper Pilot's Lounge"

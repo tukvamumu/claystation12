@@ -162,3 +162,21 @@ KORCH_ESCAPE_POD(4)
 	landmark_tag = "nav_cargo_station"
 	base_area = /area/quartermaster/hangar
 	base_turf = /turf/simulated/floor/plating
+
+/datum/shuttle/autodock/ferry/merchant
+	name = "Merchant"
+	warmup_time = 10
+	shuttle_area = /area/shuttle/merchant/home
+	waypoint_station = "nav_merchant_start"
+	waypoint_offsite = "nav_merchant_out"
+	dock_target = "merchant_ship_dock"
+
+/obj/effect/shuttle_landmark/merchant/start
+	name = "Merchant Base"
+	landmark_tag = "nav_merchant_start"
+	docking_controller = "merchant_station_dock"
+
+/obj/effect/shuttle_landmark/merchant/out
+	name = "Docking Bay"
+	landmark_tag = "nav_merchant_out"
+	docking_controller = "merchant_shuttle_station_dock"

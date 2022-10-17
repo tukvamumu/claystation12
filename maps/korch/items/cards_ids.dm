@@ -92,11 +92,6 @@
 	job_access_type = /datum/job/bridgestaff
 	detail_color = COLOR_COMMAND_BLUE
 
-/obj/item/card/id/korch/crew/pathfinder
-	job_access_type = /datum/job/pathfinder
-	detail_color = COLOR_PURPLE
-	extra_details = list("onegoldstripe")
-
 /obj/item/card/id/korch/crew/explorer
 	job_access_type = /datum/job/explorer
 	detail_color = COLOR_PURPLE
