@@ -8,10 +8,7 @@
 	minimum_character_age = list(SPECIES_HUMAN = 19)
 	ideal_character_age = 30
 	alt_titles = list(
-		"Engine Technician",
-		"Damage Control Technician",
-		"Electrician",
-		"Atmospheric Technician",
+		"Atmospheric Technician" = /decl/hierarchy/outfit/job/korch/crew/engineering/engineer/atmos,
 		)
 	outfit_type = /decl/hierarchy/outfit/job/korch/crew/engineering/engineer
 	min_skill = list(   SKILL_COMPUTER     = SKILL_BASIC,
@@ -24,7 +21,8 @@
 	max_skill = list(   SKILL_CONSTRUCTION = SKILL_MAX,
 	                    SKILL_ELECTRICAL   = SKILL_MAX,
 	                    SKILL_ATMOS        = SKILL_MAX,
-	                    SKILL_ENGINES      = SKILL_MAX)
+	                    SKILL_ENGINES      = SKILL_MAX,
+	                    SKILL_MECH         = HAS_PERK)
 	skill_points = 28
 
 	access = list(

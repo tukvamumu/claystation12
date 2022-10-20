@@ -11,7 +11,8 @@
 	                    SKILL_PILOT       = SKILL_ADEPT)
 
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX,
-	                    SKILL_SCIENCE     = SKILL_MAX)
+	                    SKILL_SCIENCE     = SKILL_MAX,
+	                    SKILL_MECH         = HAS_PERK)
 	skill_points = 30
 
 	allowed_branches = list(/datum/mil_branch/nanotrasen)

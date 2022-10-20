@@ -50,6 +50,7 @@
 	uniform = /obj/item/clothing/under/rank/chief_engineer
 	shoes = /obj/item/clothing/shoes/workboots
 	head = /obj/item/clothing/head/hardhat/white
+	belt = /obj/item/storage/belt/utility/full
 	l_ear = /obj/item/device/radio/headset/heads/ce
 	id_types = list(/obj/item/card/id/korch/silver/engineering)
 	pda_type = /obj/item/modular_computer/pda/heads/ce

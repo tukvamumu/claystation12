@@ -164,3 +164,32 @@
 	icon_state = "shuttlered"
 	req_access = list(access_cent_general)
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
+// Otkorch
+
+/area/otkorch
+	name = "\improper SEV Otkorch"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/reinforced/airless
+	requires_power = 1
+	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_HIDE_FROM_HOLOMAP
+	base_turf_special_handling = TRUE
+
+/area/otkorch/cockpit
+	name = "\improper SEV Otkorch - Cockpit"
+	req_access = list(access_captain)
+
+/area/otkorch/power
+	name = "\improper SEV Otkorch - Engineering Compartment"
+	req_access = list(access_captain)
+
+/area/otkorch/storage
+	name = "\improper SEV Otkorch - Storage Bay"
+	req_access = list(access_captain)
+
+/area/otkorch/air
+	name = "\improper SEV Otkorch - Life Support Compartment"
+
+/area/otkorch/crew
+	name = "\improper SEV Otkorch - Crew Compartment"

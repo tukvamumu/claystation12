@@ -20,8 +20,21 @@
 	name = "\improper Centcom Testing Facility"
 
 /area/centcom/safe
+	name = "\improper Centcom beach station"
 	req_access = list(access_cent_general)
+	area_flags = AREA_FLAG_NO_MODIFY
+	dynamic_lighting = 1
+	sound_env = PLAIN
 
+/area/centcom/safe/hanger
+	name = "\improper Centcom beach hangar"
+	sound_env = LARGE_ENCLOSED
+
+/area/centcom/safe/beach
+	name = "\improper Centcom beach"
+	dynamic_lighting = 0
+	sound_env = LARGE_ENCLOSED
+	ambience = list('sound/ambience/shore.ogg','sound/ambience/seag1.ogg','sound/ambience/seag2.ogg','sound/ambience/seag3.ogg')
 
 /area/shuttle/administration/centcom
 	name = "\improper Administration Shuttle"

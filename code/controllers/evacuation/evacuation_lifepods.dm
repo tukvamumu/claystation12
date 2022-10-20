@@ -5,12 +5,12 @@
 /datum/evacuation_controller/lifepods
 	name = "escape pod controller"
 
-	evac_prep_delay    = 5 MINUTES
-	evac_launch_delay  = 2 MINUTES
+	evac_prep_delay    = 4 MINUTES
+	evac_launch_delay  = 3 MINUTES
 	evac_transit_delay = 2 MINUTES
 
-	transfer_prep_additional_delay     = 3 MINUTES
-	autotransfer_prep_additional_delay = 3 MINUTES
+	transfer_prep_additional_delay     = 4 MINUTES
+	autotransfer_prep_additional_delay = 4 MINUTES
 	emergency_prep_additional_delay    = 0 MINUTES
 
 	evacuation_options = list(

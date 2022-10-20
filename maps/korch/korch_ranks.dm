@@ -130,8 +130,6 @@
 						SKILL_SCIENCE = SKILL_BASIC,
 						SKILL_EVA     = SKILL_BASIC)
 
-
-
 /datum/mil_rank/grade() //useless, for sure
 	. = ..()
 	if(!sort_order)

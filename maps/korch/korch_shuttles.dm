@@ -3,7 +3,8 @@
 	category = /datum/shuttle/autodock/ferry/escape_pod/korchpod
 	sound_takeoff = 'sound/effects/rocket.ogg'
 	sound_landing = 'sound/effects/rocket_backwards.ogg'
-	warmup_time = 10
+	warmup_time = 2
+	move_time = 5
 
 /obj/effect/shuttle_landmark/escape_pod/start
 	name = "Docked"
@@ -42,6 +43,41 @@ KORCH_ESCAPE_POD(1)
 KORCH_ESCAPE_POD(2)
 KORCH_ESCAPE_POD(3)
 KORCH_ESCAPE_POD(4)
+
+/datum/shuttle/autodock/overmap/otkorch
+	name = "Otkorch"
+	move_time = 50
+	shuttle_area = list(/area/otkorch/cockpit, /area/otkorch/power, /area/otkorch/storage, /area/otkorch/air, /area/otkorch/crew)
+	current_location = "nav_hangar_otkorch"
+	landmark_transition = "nav_transit_otkorch"
+	dock_target = "otkorch_shuttle"
+	range = 2
+	logging_home_tag = "nav_hangar_otkorch"
+	logging_access = access_captain
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling
+
+/obj/effect/shuttle_landmark/korch/hangar/otkorch
+	name = "Otkorch Hangar"
+	landmark_tag = "nav_hangar_otkorch"
+	docking_controller = "otkorch_shuttle_dock_airlock"
+	base_turf = /turf/simulated/floor/reinforced/airless
+
+/obj/effect/shuttle_landmark/korch/deck1/otkorch
+	name = "Space near First Deck"
+	landmark_tag = "nav_deck1_otkorch"
+
+/obj/effect/shuttle_landmark/korch/deck2/otkorch
+	name = "Space near Second Deck"
+	landmark_tag = "nav_deck2_otkorch"
+
+/obj/effect/shuttle_landmark/korch/deck3/otkorch
+	name = "Space near Third Deck"
+	landmark_tag = "nav_deck3_otkorch"
+
+/obj/effect/shuttle_landmark/transit/korch/otkorch
+	name = "In transit"
+	landmark_tag = "nav_transit_otkorch"
+
 
 /datum/shuttle/autodock/ferry/petrov
 	name = "Petrov"
@@ -139,9 +175,38 @@ KORCH_ESCAPE_POD(4)
 	name = "In transit"
 	landmark_tag = "nav_transit_guppy"
 
-/obj/effect/shuttle_landmark/ert/hanger
-	name =  "Southeast of Hanger deck"
-	landmark_tag = "nav_ert_hanger"
+//NT Rescue Shuttle
+
+/datum/shuttle/autodock/multi/antag/rescue
+	destination_tags = list(
+		"nav_ert_deck1",
+		"nav_ert_deck2",
+		"nav_ert_deck3",
+		"nav_away_4",
+		"nav_derelict_4",
+		"nav_cluster_4",
+		"nav_ert_dock",
+		"nav_ert_start",
+		"nav_lost_supply_base_antag",
+		"nav_marooned_antag",
+		"nav_smugglers_antag",
+		"nav_magshield_antag",
+		"nav_casino_antag",
+		"nav_yacht_antag",
+		"nav_slavers_base_antag",
+		)
+
+/obj/effect/shuttle_landmark/ert/deck1
+	name =  "Southwest of First deck"
+	landmark_tag = "nav_ert_deck1"
+
+/obj/effect/shuttle_landmark/ert/deck2
+	name = "Northwest of Second deck"
+	landmark_tag = "nav_ert_deck2"
+
+/obj/effect/shuttle_landmark/ert/deck3
+	name = "Northwest of Third deck"
+	landmark_tag = "nav_ert_deck3"
 
 //Cargo drone
 
@@ -163,6 +228,8 @@ KORCH_ESCAPE_POD(4)
 	base_area = /area/quartermaster/hangar
 	base_turf = /turf/simulated/floor/plating
 
+//Merchant
+
 /datum/shuttle/autodock/ferry/merchant
 	name = "Merchant"
 	warmup_time = 10
@@ -180,3 +247,82 @@ KORCH_ESCAPE_POD(4)
 	name = "Docking Bay"
 	landmark_tag = "nav_merchant_out"
 	docking_controller = "merchant_shuttle_station_dock"
+
+//Ninja Shuttle.
+/datum/shuttle/autodock/multi/antag/ninja
+	destination_tags = list(
+		"nav_ninja_deck1",
+		"nav_ninja_deck2",
+		"nav_ninja_deck3",
+		"nav_ninja_deck4",
+		"nav_ninja_deck5",
+		"nav_away_6",
+		"nav_derelict_5",
+		"nav_cluster_6",
+		"nav_ninja_start",
+		"nav_lost_supply_base_antag",
+		"nav_marooned_antag",
+		"nav_smugglers_antag",
+		"nav_magshield_antag",
+		"nav_casino_antag",
+		"nav_yacht_antag",
+		"nav_slavers_base_antag"
+		)
+
+/obj/effect/shuttle_landmark/ninja/deck1
+	name = "South of First Deck"
+	landmark_tag = "nav_ninja_deck1"
+
+/obj/effect/shuttle_landmark/ninja/deck2
+	name = "Northeast of Second Deck"
+	landmark_tag = "nav_ninja_deck2"
+
+/obj/effect/shuttle_landmark/ninja/deck3
+	name = "East of Third Deck"
+	landmark_tag = "nav_ninja_deck3"
+
+
+/obj/effect/shuttle_landmark/merc/deck1
+	name = "Northeast of First Deck"
+	landmark_tag = "nav_merc_deck1"
+
+/obj/effect/shuttle_landmark/merc/deck2
+	name = "Southeast of the Second deck"
+	landmark_tag = "nav_merc_deck2"
+
+/obj/effect/shuttle_landmark/merc/deck3
+	name = "South of Third deck"
+	landmark_tag = "nav_merc_deck3"
+
+//Skipjack
+/datum/shuttle/autodock/multi/antag/skipjack
+	destination_tags = list(
+		"nav_skipjack_deck1",
+		"nav_skipjack_deck2",
+		"nav_skipjack_deck3",
+		"nav_away_7",
+		"nav_derelict_7",
+		"nav_cluster_7",
+		"nav_skipjack_dock",
+		"nav_skipjack_start",
+		"nav_lost_supply_base_antag",
+		"nav_marooned_antag",
+		"nav_smugglers_antag",
+		"nav_magshield_antag",
+		"nav_casino_antag",
+		"nav_yacht_antag",
+		"nav_slavers_base_antag",
+		)
+
+/obj/effect/shuttle_landmark/skipjack/deck1
+	name = "Northwest of First Deck"
+	landmark_tag = "nav_skipjack_deck1"
+
+/obj/effect/shuttle_landmark/skipjack/deck2
+	name = "Southwest of the Second deck"
+	landmark_tag = "nav_skipjack_deck2"
+
+/obj/effect/shuttle_landmark/skipjack/deck3
+	name = "Southeast of Third deck"
+	landmark_tag = "nav_skipjack_deck3"
+

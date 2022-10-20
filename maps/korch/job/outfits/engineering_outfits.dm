@@ -13,8 +13,15 @@
 	head = /obj/item/clothing/head/hardhat/orange
 	uniform = /obj/item/clothing/under/hazard
 	shoes = /obj/item/clothing/shoes/workboots
+	belt = /obj/item/storage/belt/utility/full
 	id_types = list(/obj/item/card/id/korch/crew/engineering)
 	pda_type = /obj/item/modular_computer/pda/engineering
+
+/decl/hierarchy/outfit/job/korch/crew/engineering/engineer/atmos
+	name = OUTFIT_JOB_NAME("Atmos Technician - Korch")
+	head = /obj/item/clothing/head/hardhat/red
+	uniform = /obj/item/clothing/under/rank/atmospheric_technician
+	belt = /obj/item/storage/belt/utility/atmostech
 
 /decl/hierarchy/outfit/job/korch/crew/engineering/roboticist
 	name = OUTFIT_JOB_NAME("Roboticist - Korch")

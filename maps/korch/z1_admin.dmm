@@ -8210,7 +8210,7 @@
 /area/merchant_station)
 "aOa" = (
 /mob/living/simple_animal/tindalos{
-	name = "Eddy"
+	name = "Artur ReloadT34"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/merchant_station)
@@ -8538,6 +8538,7 @@
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
+/obj/item/bikehorn,
 /turf/simulated/floor/tiled,
 /area/merchant_station)
 "aPn" = (
@@ -10546,7 +10547,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/merchant_station)
 "aWE" = (
@@ -11079,6 +11079,34 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_volleyball)
+"cuA" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/closet/secure_closet/freezer/money{
+	req_access = null
+	},
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/obj/item/spacecash/bundle/c1000,
+/turf/simulated/floor/tiled/dark,
+/area/merchant_station)
 "czt" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -11111,6 +11139,12 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"cQG" = (
+/obj/item/gun/projectile/sniper/semistrip,
+/obj/structure/lattice,
+/obj/item/ammo_magazine/speedloader/magnum,
+/turf/space,
+/area/space)
 "djm" = (
 /obj/item/beach_ball/holovolleyball,
 /turf/simulated/floor/holofloor/beach/sand,
@@ -11242,10 +11276,17 @@
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
 "geX" = (
-/mob/living/exosuit/premade/firefighter,
+/mob/living/exosuit/premade/firefighter{
+	name = "Lada Calina"
+	},
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/tiled,
 /area/shuttle/merchant/home)
+"gjR" = (
+/turf/simulated/wall/prepainted{
+	can_open = 1
+	},
+/area/merchant_station)
 "glo" = (
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_volleyball)
@@ -11687,9 +11728,9 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
 "pBw" = (
-/obj/effect/step_trigger/thrower,
-/turf/space,
-/area/space)
+/obj/machinery/jukebox,
+/turf/simulated/floor/tiled,
+/area/shuttle/merchant/home)
 "pEp" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced,
@@ -17118,30 +17159,30 @@ aab
 aab
 aLW
 aLW
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
-pBw
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
 aLF
 aab
 aab
@@ -17342,8 +17383,8 @@ aab
 aab
 aab
 aab
-aab
-aab
+cQG
+avD
 aLF
 aab
 aab
@@ -17545,7 +17586,7 @@ avT
 avT
 avT
 avT
-aab
+avD
 aLF
 aab
 aab
@@ -17745,9 +17786,9 @@ aab
 aab
 aab
 avD
-aab
-aab
-aab
+avD
+avD
+avD
 aLF
 aab
 aab
@@ -19739,7 +19780,7 @@ aab
 aLW
 aLW
 aLW
-aMf
+gjR
 aMV
 aMC
 aNT
@@ -20962,7 +21003,7 @@ aMf
 aab
 aab
 wVI
-aSj
+pBw
 aSH
 aTk
 aTE
@@ -24592,7 +24633,7 @@ aLW
 aNC
 aOh
 aON
-aON
+cuA
 aNC
 aNC
 aPc

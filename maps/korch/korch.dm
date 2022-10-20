@@ -52,6 +52,18 @@
     #include "korch_announcements.dm"
 	#include "korch_setup.dm"
 
+	#include "loadout/_defines.dm"
+	#include "loadout/loadout_accessories.dm"
+	#include "loadout/loadout_eyes.dm"
+	#include "loadout/loadout_gloves.dm"
+	#include "loadout/loadout_head.dm"
+	#include "loadout/loadout_misc.dm"
+	#include "loadout/loadout_shoes.dm"
+	#include "loadout/loadout_suit.dm"
+	#include "loadout/loadout_uniform.dm"
+	#include "loadout/loadout_xeno.dm"
+	#include "loadout/~defines.dm"
+
 	#include "korch1-deck3.dmm"
 	#include "korch2-deck2.dmm"
 	#include "korch3-deck1.dmm"

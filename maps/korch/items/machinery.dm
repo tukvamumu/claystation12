@@ -81,7 +81,7 @@
 	suit = /obj/item/clothing/suit/space/syndicate/black
 	helmet = /obj/item/clothing/head/helmet/space/syndicate/black
 	boots = /obj/item/clothing/shoes/magboots
-	tank = /obj/item/tank/oxygen
+	tank = /obj/item/tank/oxygen_emergency_extended
 	mask = /obj/item/clothing/mask/breath
 	req_access = list(access_bridge, access_keycard_auth)
 	islocked = 1

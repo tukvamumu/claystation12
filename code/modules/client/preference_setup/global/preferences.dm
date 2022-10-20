@@ -228,6 +228,7 @@ var/global/list/_client_preferences_by_type
 /datum/client_preference/show_credits
 	description = "Show End Titles"
 	key = "SHOW_CREDITS"
+	options = list(GLOB.PREF_NO, GLOB.PREF_YES)
 
 /datum/client_preference/show_ckey_credits
 	description = "Show Ckey in End Credits/Special Role List"
