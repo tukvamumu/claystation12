@@ -275,7 +275,9 @@ var/global/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 /proc/add_utf_tag(var/browser_content)
 	if(isfile(browser_content))
 		return browser_content
-	else if(findtext(browser_content, "<html>"))
+	else if	(findtext(browser_content, "<html>"))
 		return replacetext(browser_content, "<html>", "<html><meta charset='UTF-8'>")
+	else if(findtext(browser_content, "<body>"))
+		return replacetext(browser_content, "<body>", "<meta charset='UTF-8'><body>")
 	else
 		return "[browser_content]"
