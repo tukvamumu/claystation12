@@ -36,6 +36,10 @@
 	sound_env = LARGE_ENCLOSED
 	ambience = list('sound/ambience/shore.ogg','sound/ambience/seag1.ogg','sound/ambience/seag2.ogg','sound/ambience/seag3.ogg')
 
+/area/shuttle/transport1/centcom
+	icon_state = "shuttle"
+	name = "\improper Transport Shuttle Centcom"
+
 /area/shuttle/administration/centcom
 	name = "\improper Administration Shuttle"
 	icon_state = "shuttlered"

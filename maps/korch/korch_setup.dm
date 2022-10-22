@@ -5,9 +5,9 @@
 
 /datum/map/korch/get_map_info()
 	. = list()
-	. +=  "You're aboard the " + replacetext("<b>[station_name]</b>", "\improper", "") + ", an NanoTrasen starship. Its primary mission is doing research and explore the unseen."
+	. +=  "You're aboard the " + replacetext("<b>[station_name]</b>", "\improper", "") + ", a NanoTrasen starship. Its primary mission is doing research, mine resources and explore the assigned sector."
 	. +=  "The vessel is staffed with NanoTrasen employees."
-	. +=  "This area of space is uncharted. You might encounter remote outposts or drifting hulks, but no recognized government holds claim on this sector."
+	. +=  "This area of space is uncharted and bordering with NanoTrasen territory. You might aswell claim this sector."
 	return jointext(., "<br>")
 
 /datum/map/korch/send_welcome()

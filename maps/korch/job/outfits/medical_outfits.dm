@@ -22,6 +22,7 @@
 	suit = /obj/item/clothing/suit/storage/toggle/fr_jacket
 	shoes = /obj/item/clothing/shoes/white
 	l_ear = /obj/item/device/radio/headset/headset_corpsman/alt
+	id_types = list(/obj/item/card/id/korch/crew/medical/paramedic)
 	flags = OUTFIT_FLAGS_JOB_DEFAULT | OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/job/korch/crew/medical/chemist

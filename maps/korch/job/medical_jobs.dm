@@ -42,13 +42,12 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Chief Medical Officer"
+	selection_color = "#013d3b"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 19)
 	ideal_character_age = 40
 	minimal_player_age = 0
-	alt_titles = list(
-		"Paramedic",
-		"Corpsman")
+	alt_titles = list("Corpsman")
 	outfit_type = /decl/hierarchy/outfit/job/korch/crew/medical/paramedic
 	min_skill = list(   SKILL_EVA     = SKILL_BASIC,
 	                    SKILL_MEDICAL = SKILL_BASIC,

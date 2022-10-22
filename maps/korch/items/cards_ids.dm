@@ -33,6 +33,10 @@
 	job_access_type = /datum/job/medic_doctor
 	detail_color = COLOR_PALE_BLUE_GRAY
 
+/obj/item/card/id/korch/crew/medical/paramedic
+	job_access_type = /datum/job/paramedic
+	detail_color = COLOR_PALE_BLUE_GRAY
+
 /obj/item/card/id/korch/crew/medical/chemist
 	job_access_type = /datum/job/chemist
 	detail_color = COLOR_PALE_BLUE_GRAY

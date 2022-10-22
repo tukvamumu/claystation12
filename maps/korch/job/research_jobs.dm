@@ -9,7 +9,7 @@
 	selection_color = "#633d63"
 	economic_power = 12
 	minimal_player_age = 3
-	minimum_character_age = list(SPECIES_HUMAN = 30)
+	minimum_character_age = list(SPECIES_HUMAN = 24)
 	ideal_character_age = 50
 	alt_titles = list(
 		"Xenoarcheologist",

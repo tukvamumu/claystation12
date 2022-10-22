@@ -1,6 +1,6 @@
 /obj/effect/overmap/visitable/ship/korch
 	name = "NSV Korch"
-	desc = "WORK IN PROGRESS"
+	desc = "A NanoTrasen starship"
 	fore_dir = WEST
 	vessel_mass = 40000
 	burn_delay = 2 SECONDS
@@ -20,7 +20,6 @@
 		"Cyclopes" = list("nav_merc_dock"),
 		"ICGNV Hound" = list("nav_hound_dock"),
 		"SFV Arbiter" = list("nav_sfv_arbiter_dock")
-
 	)
 
 	initial_generic_waypoints = list(

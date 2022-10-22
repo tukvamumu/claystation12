@@ -119,6 +119,11 @@
 	icon_state = "hydro"
 	lighting_tone = AREA_LIGHTING_COOL
 
+/area/hydroponics/garden
+	name = "\improper Second Deck - Garden"
+	icon_state = "hydro"
+	lighting_tone = AREA_LIGHTING_WARM
+
 /area/janitor
 	name = "\improper Second Deck - Custodial Closet"
 	icon_state = "janitor"
@@ -184,11 +189,6 @@
 /area/crew_quarters/office
 	name = "\improper Second Deck - Computer Lab"
 	icon_state = "conference"
-
-/area/engineering/fuelbay
-	name = "\improper Second Deck - Fuel Bay"
-	icon_state = "engineering"
-	req_access = list(access_construction)
 
 /area/bridge/meeting_room
 	name = "\improper Second Deck - Command Meeting Room"

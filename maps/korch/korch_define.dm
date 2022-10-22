@@ -50,10 +50,10 @@
 	company_short = "NT"
 
 	use_overmap = 1
-	num_exoplanets = 1
+	num_exoplanets = 6
 	overmap_size = 35
 	overmap_event_areas = 34
-	away_site_budget = 3
+	away_site_budget = 4
 	min_offmap_players = 12
 
 	planet_size = list(129,129)

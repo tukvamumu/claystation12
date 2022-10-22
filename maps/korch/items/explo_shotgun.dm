@@ -14,7 +14,7 @@
 
 /obj/item/gun/projectile/shotgun/pump/get_mechanics_info()
 	. = ..()
-	. += "<br>This gun will be allowed to fire freely once off-ship, otherwise needs to be authorized by XO. \
+	. += "<br>This gun will be allowed to fire freely once off-ship, otherwise needs to be authorized by HoP. \
 	<br>While you can load this gun with lethal ammo, there's a considerable risk of explosion when fired."
 
 /obj/item/gun/projectile/shotgun/pump/exploration/get_antag_info()

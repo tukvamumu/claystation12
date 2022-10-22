@@ -326,3 +326,70 @@ KORCH_ESCAPE_POD(4)
 	name = "Southeast of Third deck"
 	landmark_tag = "nav_skipjack_deck3"
 
+//Admin
+
+/datum/shuttle/autodock/ferry/administration
+	name = "Administration"
+	warmup_time = 10	//want some warmup time so people can cancel.
+	shuttle_area = /area/shuttle/administration/centcom
+	dock_target = "admin_shuttle"
+	waypoint_station = "nav_admin_start"
+	waypoint_offsite = "nav_admin_out"
+
+/obj/effect/shuttle_landmark/admin/start
+	name = "Centcom"
+	landmark_tag = "nav_admin_start"
+	docking_controller = "admin_shuttle"
+	base_area = /area/centcom
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/admin/out
+	name = "Docking Bay"
+	landmark_tag = "nav_admin_out"
+	docking_controller = "thirddeck_station_dock"
+
+//Specops
+
+/datum/shuttle/autodock/ferry/specops/ert
+	name = "Special Operations"
+	warmup_time = 10
+	shuttle_area = /area/shuttle/specops/centcom
+	dock_target = "specops_shuttle_fore"
+	waypoint_station = "nav_specops_start"
+	waypoint_offsite = "nav_specops_out"
+
+/obj/effect/shuttle_landmark/specops/start
+	name = "Centcom"
+	landmark_tag = "nav_specops_start"
+	docking_controller = "specops_shuttle_port"
+
+/obj/effect/shuttle_landmark/specops/out
+	name = "Docking Bay"
+	landmark_tag = "nav_specops_out"
+	docking_controller = "thirddeck_station_dock"
+
+
+//Transport
+
+/datum/shuttle/autodock/ferry/centcom
+	name = "Centcom"
+	location = 1
+	warmup_time = 10
+	shuttle_area = /area/shuttle/transport1/centcom
+	dock_target = "centcom_shuttle"
+	waypoint_offsite = "nav_ferry_start"
+	waypoint_station = "nav_ferry_out"
+
+/obj/effect/shuttle_landmark/ferry/start
+	name = "Centcom"
+	landmark_tag = "nav_ferry_start"
+	docking_controller = "centcom_shuttle_bay"
+
+/obj/effect/shuttle_landmark/ferry/out
+	name = "Docking Bay"
+	landmark_tag = "nav_ferry_out"
+	docking_controller = "centcom_shuttle_dock_airlock"
+
+//Makes the deck management program use hangar access
+/datum/nano_module/deck_management
+	default_access = list(access_hangar, access_cargo, access_heads)
