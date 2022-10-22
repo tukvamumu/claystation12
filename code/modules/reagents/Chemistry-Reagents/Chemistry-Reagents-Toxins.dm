@@ -1021,7 +1021,7 @@
 		if(E && !E.is_stump() && !BP_IS_ROBOTIC(E) && E.species.name != SPECIES_PROMETHEAN)
 			meatchunks += E
 	if(!meatchunks.len)
-		if(prob(10))
+		if(prob(30))
 			to_chat(H, SPAN_DANGER("Your flesh rapidly mutates!"))
 			H.set_species(SPECIES_PROMETHEAN)
 			H.shapeshifter_set_colour("#05ff9b")
