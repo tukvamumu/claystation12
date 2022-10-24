@@ -5,7 +5,7 @@
 	if(!message)
 		message = input(src.mob, "", "ooc \"text\"") as text|null
 
-	sanitize_and_communicate(/decl/communication_channel/ooc, src, message)
+	sanitize_and_communicate(/singleton/communication_channel/ooc, src, message)
 
 /client/verb/looc(message = "" as text)
 	set name = "LOOC"
@@ -15,7 +15,7 @@
 	if(!message)
 		message = input(src.mob, "", "looc \"text\"") as text|null
 
-	sanitize_and_communicate(/decl/communication_channel/ooc/looc, src, message)
+	sanitize_and_communicate(/singleton/communication_channel/ooc/looc, src, message)
 
 /client/verb/fix_chat()
 	set name = "Fix Chat"
