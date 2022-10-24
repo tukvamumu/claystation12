@@ -72,17 +72,17 @@
 /area/quartermaster/mining/eva
 	name = "\improper Mining EVA"
 	icon_state = "mining"
-	req_access = list(access_mining, access_xenoarch)
+	req_access = list(list(access_mining, access_xenoarch))
 
 /area/quartermaster/expedition/storage
 	name = "\improper Hangar Storage"
 	icon_state = "mining"
-	req_access = list(access_mining, access_explorer, access_xenoarch)
+	req_access = list(list(access_mining, access_explorer, access_xenoarch))
 
 /area/quartermaster/expedition
 	name = "\improper Expedition Preparation"
 	icon_state = "mining"
-	req_access = list(access_explorer)
+	req_access = list(list(access_explorer, access_xenoarch))
 
 /area/command/pilot
 	name = "\improper Pilot's Lounge"

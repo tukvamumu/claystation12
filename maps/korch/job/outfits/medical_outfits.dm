@@ -10,7 +10,7 @@
 
 /decl/hierarchy/outfit/job/korch/crew/medical/doctor
 	name = OUTFIT_JOB_NAME("Medic - Korch")
-	uniform = /obj/item/clothing/under/rank/medical/scrubs/teal
+	uniform = /obj/item/clothing/under/korch/doctor
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/black
 	id_types = list(/obj/item/card/id/korch/crew/medical)

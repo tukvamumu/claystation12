@@ -7,6 +7,7 @@
 	#include "areas/shuttles.dm"
 	#include "korch_shuttles.dm"
 	#include "korch_ranks.dm"
+	#include "korch_elevator.dm"
 
 	#include "datums/department_exploration.dm"
 	#include "datums/reports/command.dm"
@@ -43,6 +44,8 @@
 	#include "items/explo_shotgun.dm"
 	#include "items/mecha.dm"
 	#include "items/weapons.dm"
+	#include "items/clothing.dm"
+	#include "items/rigs.dm"
 	#include "structures/signs.dm"
 	#include "structures/closets.dm"
 	#include "job/korch_access.dm"

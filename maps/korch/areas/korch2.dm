@@ -16,9 +16,11 @@
 
 /area/thruster/d2port
 	name = "\improper Second Deck  - Port Nacelle"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 /area/thruster/d2starboard
 	name = "\improper Second Deck - Starboard Nacelle"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 /area/crew_quarters/restroom
 	name = "\improper Second Deck - Restrooms"

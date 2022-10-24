@@ -44,26 +44,19 @@
 /obj/machinery/suit_cycler/exploration
 	name = "Exploration suit cycler"
 	model_text = "Exploration"
-	req_access = list(access_explorer)
-	available_modifications = list(/decl/item_modifier/space_suit/mining)
+	req_access = list(list(access_explorer, access_xenoarch))
+	available_modifications = list(/decl/item_modifier/space_suit/explorer)
 	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
-
-/obj/item/clothing/suit/space/void/explorer
-	name = "Exploration Voidsuit"
-	desc = "Voidsuit used by the exploration team"
-
-/obj/item/clothing/head/helmet/space/void/explorer
-	name = "Exploration Voidsuit Helmet"
-	desc = "Voidsuit used by the exploration team"
 
 /obj/machinery/suit_storage_unit/explorer
 	name = "Exploration Voidsuit Storage Unit"
-	suit = /obj/item/clothing/suit/space/void/explorer
-	helmet = /obj/item/clothing/head/helmet/space/void/explorer
+	suit = /obj/item/clothing/suit/space/void/exploration
+	helmet = /obj/item/clothing/head/helmet/space/void/exploration
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_explorer)
+	req_access = list(list(access_explorer, access_xenoarch))
+
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/pilot

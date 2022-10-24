@@ -9,9 +9,9 @@
 
 /decl/hierarchy/outfit/job/korch/crew/research/scientist
 	name = OUTFIT_JOB_NAME("Scientist - Korch")
-	uniform = /obj/item/clothing/under/rank/scientist/nanotrasen
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science/nanotrasen
-	shoes = /obj/item/clothing/shoes/black
+	uniform = /obj/item/clothing/under/korch/scientist
+//	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	shoes = /obj/item/clothing/shoes/leather
 	id_types = list(/obj/item/card/id/korch/crew/research/scientist)
 	l_ear = /obj/item/device/radio/headset/science
 	pda_type = /obj/item/modular_computer/pda/science

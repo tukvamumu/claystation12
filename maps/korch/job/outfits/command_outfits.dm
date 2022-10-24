@@ -6,11 +6,11 @@
 /decl/hierarchy/outfit/job/korch/crew/command/CO
 	name = OUTFIT_JOB_NAME("Captain")
 	glasses = /obj/item/clothing/glasses/aviators_black
-	uniform = /obj/item/clothing/under/rank/captain
-	suit = /obj/item/clothing/suit/captunic/capjacket
+	uniform = /obj/item/clothing/under/korch/capshirt
+	suit = /obj/item/clothing/suit/storage/korch/capsuit
 	l_ear = /obj/item/device/radio/headset/heads/korchexec
 	shoes = /obj/item/clothing/shoes/dutyboots
-	head = /obj/item/clothing/head/caphat/cap
+	head = /obj/item/clothing/head/korch/caphat
 	id_types = list(/obj/item/card/id/korch/gold)
 	pda_type = /obj/item/modular_computer/pda/captain
 
@@ -77,7 +77,7 @@
 	BACKPACK_OVERRIDE_SECURITY
 
 /decl/hierarchy/outfit/job/korch/crew/command/bridgestaff
-	name = OUTFIT_JOB_NAME("Bridge Staff")
+	name = OUTFIT_JOB_NAME("Bridge Pilot")
 	glasses = /obj/item/clothing/glasses/aviators_black
 	uniform = /obj/item/clothing/under/rank/ntwork/nanotrasen
 	shoes = /obj/item/clothing/shoes/workboots

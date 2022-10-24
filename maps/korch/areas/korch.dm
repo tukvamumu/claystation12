@@ -41,3 +41,22 @@
 
 /area/assembly
 	req_access = list(access_robotics)
+
+/area/turbolift/korch_second
+	name = "lift (third deck)"
+	lift_floor_label = "Deck 1"
+	lift_floor_name = "Top Deck"
+	lift_announce_str = "Arriving at Top Deck: NSV Korch Bridge, HoS, Telecommunications. RnD. RD. Evacuation shuttles. Medbay Storage. CMO. Engineering. CE."
+
+/area/turbolift/korch_first
+	name = "lift (Middle deck)"
+	lift_floor_label = "Deck 2"
+	lift_floor_name = "Middle Deck"
+	lift_announce_str = "Arriving at Middle Deck: Bridge meeting room. HoP's desk. Security. Mess hall. Medbay. Cryogenic Storage. Gym. Restroom. Janitor."
+
+/area/turbolift/korch_ground
+	name = "lift (Bottom deck)"
+	lift_floor_label = "Deck 3"
+	lift_floor_name = "Hangar Deck"
+	lift_announce_str = "Arriving at Hangar Deck: Main Hangar. Supply. Exploration Preparation. Mineral Processing."
+	base_turf = /turf/simulated/floor

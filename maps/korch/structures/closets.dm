@@ -263,3 +263,29 @@
 		/obj/item/clothing/suit/fire/firefighter
 	)
 
+/obj/structure/closet/secure_closet/engineering_chief/korch
+	name = "CE's locker"
+
+/obj/structure/closet/secure_closet/engineering_personal/korch/WillContain()
+	return list(
+		/obj/item/clothing/gloves/insulated,
+		/obj/item/device/multitool,
+		/obj/item/storage/belt/utility/full,
+		/obj/item/clothing/accessory/storage/brown_vest,
+		/obj/item/device/scanner/gas,
+		/obj/item/device/radio/headset/heads/ce,
+		/obj/item/clothing/suit/storage/hazardvest,
+		/obj/item/clothing/suit/storage/toggle/highvis,
+		/obj/item/clothing/head/hardhat/orange,
+		/obj/item/storage/backpack/dufflebag,
+		/obj/item/clothing/shoes/workboots,
+		/obj/item/clothing/glasses/meson,
+		/obj/item/clothing/mask/gas,
+		/obj/item/clothing/under/hazard,
+		/obj/item/clothing/head/welding,
+		/obj/item/clothing/glasses/welding,
+	)
+
+// supply
+
+

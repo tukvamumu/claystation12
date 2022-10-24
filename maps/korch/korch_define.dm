@@ -35,7 +35,7 @@
 		/decl/audio/track/voidsent
 	)
 
-	overmap_size = 40
+	overmap_size = 35
 	overmap_event_areas = 34
 
 	allowed_spawns = list("Cryogenic Storage")
@@ -50,13 +50,10 @@
 	company_short = "NT"
 
 	use_overmap = 1
-	num_exoplanets = 6
+	num_exoplanets = 1
 	overmap_size = 35
-	overmap_event_areas = 34
 	away_site_budget = 4
 	min_offmap_players = 12
-
-	planet_size = list(129,129)
 
 	map_admin_faxes = list("NanoTrasen Central Office")
 
