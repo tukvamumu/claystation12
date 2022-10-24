@@ -7,7 +7,7 @@
 	minimal_player_age = 7
 	ideal_character_age = 35
 	minimum_character_age = list(SPECIES_HUMAN = 27)
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/security/warden
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/security/warden
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_BASIC,
 	                    SKILL_COMBAT      = SKILL_BASIC,
@@ -45,7 +45,7 @@
 	alt_titles = list(
 		"Criminal Investigator"
 	)
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/security/forensic_tech
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/security/forensic_tech
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
 	                    SKILL_EVA         = SKILL_BASIC,
@@ -81,7 +81,7 @@
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 25
 	alt_titles = list() // This is a hack. Overriding a list var with null does not actually override it due to the particulars of dm list init. Do not "clean up" without testing.
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/security/officer
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/security/officer
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_EVA         = SKILL_BASIC,
 	                    SKILL_COMBAT      = SKILL_BASIC,

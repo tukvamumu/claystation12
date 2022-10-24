@@ -473,7 +473,7 @@
 
 /obj/item/paper/memo/exploration/charonsafety
 	name = "fuel safety report"
-	info = {"Some "internal use only" reports about personnel smoking near the atmospherics holding area aboard the SEV Charon. The atmospherics holding area aboard the Charon is declared a no-smoking area, as indicated by the sign. Attached is a brief incident report with a contracted pilot. The report ends with large-font writing stating the next person found smoking near the fueling port will be demoted to sanitation tech for the rest of their deployment."}
+	info = {"Some "internal use only" reports about personnel smoking near the atmospherics holding area aboard the SEV Charon. The atmospherics holding area aboard the Charon is singletonared a no-smoking area, as indicated by the sign. Attached is a brief incident report with a contracted pilot. The report ends with large-font writing stating the next person found smoking near the fueling port will be demoted to sanitation tech for the rest of their deployment."}
 
 /obj/item/paper/memo/exploration/survivors
 	name = "interactions with survivors"

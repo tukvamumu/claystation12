@@ -1,14 +1,14 @@
-/decl/hierarchy/outfit/job/korch/crew/engineering
-	hierarchy_type = /decl/hierarchy/outfit/job/korch/crew/engineering
+/singleton/hierarchy/outfit/job/korch/crew/engineering
+	hierarchy_type = /singleton/hierarchy/outfit/job/korch/crew/engineering
 	l_ear = /obj/item/device/radio/headset/headset_eng
 	pda_slot = slot_l_store
 	flags = OUTFIT_FLAGS_JOB_DEFAULT | OUTFIT_EXTENDED_SURVIVAL
 
-/decl/hierarchy/outfit/job/korch/crew/engineering/New()
+/singleton/hierarchy/outfit/job/korch/crew/engineering/New()
 	..()
 	BACKPACK_OVERRIDE_ENGINEERING
 
-/decl/hierarchy/outfit/job/korch/crew/engineering/engineer
+/singleton/hierarchy/outfit/job/korch/crew/engineering/engineer
 	name = OUTFIT_JOB_NAME("Engineer - Korch")
 	head = /obj/item/clothing/head/hardhat/white
 	uniform = /obj/item/clothing/under/korch/hazard
@@ -17,13 +17,13 @@
 	id_types = list(/obj/item/card/id/korch/crew/engineering)
 	pda_type = /obj/item/modular_computer/pda/engineering
 
-/decl/hierarchy/outfit/job/korch/crew/engineering/engineer/atmos
+/singleton/hierarchy/outfit/job/korch/crew/engineering/engineer/atmos
 	name = OUTFIT_JOB_NAME("Atmos Technician - Korch")
 	head = /obj/item/clothing/head/hardhat/white
 	uniform = /obj/item/clothing/under/korch/hazard/atmos
 	belt = /obj/item/storage/belt/utility/atmostech
 
-/decl/hierarchy/outfit/job/korch/crew/engineering/roboticist
+/singleton/hierarchy/outfit/job/korch/crew/engineering/roboticist
 	name = OUTFIT_JOB_NAME("Roboticist - Korch")
 	uniform = /obj/item/clothing/under/rank/roboticist
 	shoes = /obj/item/clothing/shoes/black

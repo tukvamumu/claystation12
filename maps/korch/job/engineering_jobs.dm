@@ -8,9 +8,9 @@
 	minimum_character_age = list(SPECIES_HUMAN = 19)
 	ideal_character_age = 30
 	alt_titles = list(
-		"Atmospheric Technician" = /decl/hierarchy/outfit/job/korch/crew/engineering/engineer/atmos,
+		"Atmospheric Technician" = /singleton/hierarchy/outfit/job/korch/crew/engineering/engineer/atmos,
 		)
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/engineering/engineer
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/engineering/engineer
 	min_skill = list(   SKILL_COMPUTER     = SKILL_BASIC,
 	                    SKILL_EVA          = SKILL_BASIC,
 	                    SKILL_CONSTRUCTION = SKILL_ADEPT,
@@ -56,7 +56,7 @@
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
 
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/engineering/engineer
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/engineering/engineer
 
 	skill_points = 18
 	no_skill_buffs = TRUE
@@ -108,7 +108,7 @@
 	economic_power = 6
 	alt_titles = list(
 		"Mechsuit Technician")
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/engineering/roboticist
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/engineering/roboticist
 	min_skill = list(   SKILL_COMPUTER		= SKILL_ADEPT,
 	                    SKILL_DEVICES		= SKILL_ADEPT,
 	                    SKILL_EVA           = SKILL_ADEPT,

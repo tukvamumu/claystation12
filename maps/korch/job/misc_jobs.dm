@@ -30,8 +30,8 @@ Civilian
 	supervisors = "the Head of Personnel"
 	economic_power = 6
 	announced = FALSE
-	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/korch/crew/passanger/counselor, "Clown" = /decl/hierarchy/outfit/job/korch/passenger/clown)
-	outfit_type = /decl/hierarchy/outfit/job/korch/passenger/passenger
+	alt_titles = list("Psychologist" = /singleton/hierarchy/outfit/job/korch/crew/passanger/counselor, "Clown" = /singleton/hierarchy/outfit/job/korch/passenger/clown)
+	outfit_type = /singleton/hierarchy/outfit/job/korch/passenger/passenger
 	min_goals = 2
 	max_goals = 7
 
@@ -46,7 +46,7 @@ Civilian
 	ideal_character_age = 30
 	minimal_player_age = 0
 	create_record = 0
-	outfit_type = /decl/hierarchy/outfit/job/korch/merchant
+	outfit_type = /singleton/hierarchy/outfit/job/korch/merchant
 	latejoin_at_spawnpoints = 1
 	access = list(access_merchant, access_external_airlocks)
 	announced = FALSE

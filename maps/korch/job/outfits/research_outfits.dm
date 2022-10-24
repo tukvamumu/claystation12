@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/korch/crew/research/rd
+/singleton/hierarchy/outfit/job/korch/crew/research/rd
 	name = OUTFIT_JOB_NAME("Research Director - Korch")
 	uniform = /obj/item/clothing/under/rank/research_director/rdalt
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/rd/nanotrasen
@@ -7,7 +7,7 @@
 	id_types = list(/obj/item/card/id/korch/silver/research)
 	pda_type = /obj/item/modular_computer/pda/heads/rd
 
-/decl/hierarchy/outfit/job/korch/crew/research/scientist
+/singleton/hierarchy/outfit/job/korch/crew/research/scientist
 	name = OUTFIT_JOB_NAME("Scientist - Korch")
 	uniform = /obj/item/clothing/under/korch/scientist
 //	suit = /obj/item/clothing/suit/storage/toggle/labcoat

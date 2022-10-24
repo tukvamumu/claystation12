@@ -1,8 +1,8 @@
-/decl/hierarchy/outfit/job/korch/crew/exploration/New()
+/singleton/hierarchy/outfit/job/korch/crew/exploration/New()
 	..()
 	BACKPACK_OVERRIDE_ENGINEERING
 
-/decl/hierarchy/outfit/job/korch/crew/exploration/explorer
+/singleton/hierarchy/outfit/job/korch/crew/exploration/explorer
 	name = OUTFIT_JOB_NAME("NanoTrasen Research Explorer")
 	uniform = /obj/item/clothing/under/rank/ntwork/nanotrasen
 	shoes = /obj/item/clothing/shoes/workboots
@@ -10,7 +10,7 @@
 	pda_type = /obj/item/modular_computer/pda/explorer
 	l_ear = /obj/item/device/radio/headset/exploration
 
-/decl/hierarchy/outfit/job/korch/crew/pilot
+/singleton/hierarchy/outfit/job/korch/crew/pilot
 	name = OUTFIT_JOB_NAME("Nanotrasen Pilot")
 	glasses = /obj/item/clothing/glasses/aviators_black
 	uniform = /obj/item/clothing/under/rank/ntpilot/nanotrasen

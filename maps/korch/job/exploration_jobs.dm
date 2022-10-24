@@ -10,7 +10,7 @@
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 22)
 	ideal_character_age = 25
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/pilot
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/pilot
 	
 	skill_points = 20
 	
@@ -39,7 +39,7 @@
 	selection_color = "#68099e"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/exploration/explorer
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/exploration/explorer
 
 	skill_points = 18
 

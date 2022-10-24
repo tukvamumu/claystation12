@@ -10,7 +10,7 @@
 	supervisors = "the Chief Medical Officer"
 	selection_color = "#013d3b"
 	economic_power = 6
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/medical/doctor
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/medical/doctor
 	min_skill = list(   SKILL_MEDICAL     = SKILL_EXPERT,
 	                    SKILL_ANATOMY     = SKILL_ADEPT,
 	                    SKILL_CHEMISTRY   = SKILL_BASIC)
@@ -48,7 +48,7 @@
 	ideal_character_age = 40
 	minimal_player_age = 0
 	alt_titles = list("Corpsman")
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/medical/paramedic
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/medical/paramedic
 	min_skill = list(   SKILL_EVA     = SKILL_BASIC,
 	                    SKILL_MEDICAL = SKILL_BASIC,
 	                    SKILL_ANATOMY = SKILL_BASIC)
@@ -87,7 +87,7 @@
 	alt_titles = list(
 		"Corpsman Trainee")
 
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/medical/doctor
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/medical/doctor
 
 	skill_points = 12
 	no_skill_buffs = TRUE
@@ -132,7 +132,7 @@
 	alt_titles = list(
 		"Chemist"
 	)
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/medical/chemist
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/medical/chemist
 	min_skill = list(   SKILL_MEDICAL   = SKILL_BASIC,
 	                    SKILL_CHEMISTRY = SKILL_ADEPT)
 

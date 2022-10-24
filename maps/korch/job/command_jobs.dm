@@ -5,7 +5,7 @@
 	economic_power = 16
 	minimum_character_age = list(SPECIES_HUMAN = 40)
 	ideal_character_age = 50
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/command/CO
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/command/CO
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_SCIENCE     = SKILL_ADEPT,
 	                    SKILL_PILOT       = SKILL_ADEPT)
@@ -40,7 +40,7 @@
 	economic_power = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 45
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/command/hop
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/command/hop
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
 	                    SKILL_PILOT       = SKILL_BASIC)
@@ -83,7 +83,7 @@
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 60
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/research/rd
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/research/rd
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
 	                    SKILL_FINANCE     = SKILL_ADEPT,
@@ -126,7 +126,7 @@
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 48
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/command/cmo
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/command/cmo
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_MEDICAL     = SKILL_EXPERT,
 	                    SKILL_ANATOMY     = SKILL_EXPERT,
@@ -165,7 +165,7 @@
 	minimum_character_age = list(SPECIES_HUMAN = 24)
 	ideal_character_age = 40
 	minimal_player_age = 14
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/command/chief_engineer
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/command/chief_engineer
 	min_skill = list(   SKILL_BUREAUCRACY  = SKILL_BASIC,
 	                    SKILL_COMPUTER     = SKILL_ADEPT,
 	                    SKILL_EVA          = SKILL_ADEPT,
@@ -213,7 +213,7 @@
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 25)
 	ideal_character_age = 35
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/command/hos
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/command/hos
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_BASIC,
 	                    SKILL_COMBAT      = SKILL_BASIC,
@@ -258,7 +258,7 @@
 	economic_power = 8
 	minimum_character_age = list(SPECIES_HUMAN = 22)
 	ideal_character_age = 24
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/command/bridgestaff
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/command/bridgestaff
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_PILOT       = SKILL_ADEPT)
 

@@ -28,7 +28,7 @@
 	player.char_branch = GLOB.mil_branches.get_branch("NanoTrasen")
 	player.char_rank = GLOB.mil_branches.get_rank("ntsec", "NT Security")
 
-	var/decl/hierarchy/outfit/ert_outfit = outfit_by_type((player.mind == leader) ? /decl/hierarchy/outfit/job/korch/ert/leader : /decl/hierarchy/outfit/job/korch/ert)
+	var/singleton/hierarchy/outfit/ert_outfit = outfit_by_type((player.mind == leader) ? /singleton/hierarchy/outfit/job/korch/ert/leader : /singleton/hierarchy/outfit/job/korch/ert)
 	ert_outfit.equip(player)
 
 	return 1

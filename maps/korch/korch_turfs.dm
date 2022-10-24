@@ -4,5 +4,5 @@
 /turf/simulated/floor/tiled
 	name = "deck"
 
-/decl/flooring/tiling
+/singleton/flooring/tiling
 	name = "deck"

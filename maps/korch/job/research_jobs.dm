@@ -18,7 +18,7 @@
 		"Xenobiologist",
 		"Xenobotanist"
 	)
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/research/scientist
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/research/scientist
 
 	access = list(
 		access_tox, access_tox_storage, access_maint_tunnels, access_research, access_mining_office,

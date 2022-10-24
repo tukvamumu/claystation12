@@ -9,7 +9,7 @@
 	economic_power = 6
 	minimal_player_age = 0
 	supervisors = "the Executive Officer"
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/service/chaplain
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/service/chaplain
 	access = list(
 		access_morgue, access_chapel_office,
 		access_crematorium, access_nt_crew,
@@ -30,7 +30,7 @@
 	ideal_character_age = 20
 	alt_titles = list(
 		"Janitor")
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/service/janitor
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/service/janitor
 	min_skill = list(   SKILL_HAULING = SKILL_BASIC)
 
 	access = list(
@@ -55,7 +55,7 @@
 		"Steward",
 		"Culinary Specialist"
 	)
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/service/cook
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/service/cook
 	min_skill = list(
 		SKILL_BOTANY = SKILL_BASIC,
 		SKILL_CHEMISTRY = SKILL_BASIC,

@@ -9,7 +9,7 @@
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 27)
 	ideal_character_age = 35
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/supply/qm
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/supply/qm
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_FINANCE     = SKILL_BASIC,
 	                    SKILL_HAULING     = SKILL_BASIC,
@@ -43,7 +43,7 @@
 	supervisors = "the QM and HoP"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 24
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/supply/tech
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/supply/tech
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_FINANCE     = SKILL_BASIC,
 	                    SKILL_HAULING     = SKILL_BASIC,
@@ -82,7 +82,7 @@
 
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
 
-	outfit_type = /decl/hierarchy/outfit/job/korch/crew/supply/mining
+	outfit_type = /singleton/hierarchy/outfit/job/korch/crew/supply/mining
 
 	access = list(
 		access_mining, access_mining_office, access_mining_station,
