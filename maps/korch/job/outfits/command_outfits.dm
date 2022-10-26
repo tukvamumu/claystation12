@@ -47,7 +47,7 @@
 
 /singleton/hierarchy/outfit/job/korch/crew/command/chief_engineer
 	name = OUTFIT_JOB_NAME("Chief Engineer - Korch")
-	uniform = /obj/item/clothing/under/rank/chief_engineer
+	uniform = /obj/item/clothing/under/korch/hazard/ce
 	shoes = /obj/item/clothing/shoes/workboots
 	head = /obj/item/clothing/head/hardhat/white
 	belt = /obj/item/storage/belt/utility/full

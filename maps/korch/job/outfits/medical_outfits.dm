@@ -10,8 +10,8 @@
 
 /singleton/hierarchy/outfit/job/korch/crew/medical/doctor
 	name = OUTFIT_JOB_NAME("Medic - Korch")
+	head = /obj/item/clothing/head/soft/medsoft
 	uniform = /obj/item/clothing/under/korch/doctor
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/black
 	id_types = list(/obj/item/card/id/korch/crew/medical)
 	l_ear = /obj/item/device/radio/headset/headset_corpsman

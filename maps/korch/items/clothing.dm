@@ -16,6 +16,16 @@
 		laser = ARMOR_LASER_MINOR,
 		)
 
+/obj/item/clothing/head/soft/medsoft
+	name = "\improper Medical soft cap"
+	desc = "A baseball hat worn by medical personnel."
+	icon_state = "medsoft"
+	icon = 'maps/korch/icons/obj/obj_head_korch.dmi'
+	item_icons = list(slot_head_str = 'maps/korch/icons/mob/onmob_head_korch.dmi')
+	armor = list(
+		bio = 10
+		)
+
 //Shirts
 
 /obj/item/clothing/under/korch
@@ -49,6 +59,11 @@
 	name = "Atmospheric Technician's jumpsuit"
 	desc = "A bluish jumpsuit with high-visibility lines usualy worn by atmospheric technicians. Made from fire-resistant materials."
 	icon_state = "atmos"
+
+/obj/item/clothing/under/korch/hazard/ce
+	name = "Chief Engineers's jumpsuit"
+	desc = "A purplish jumpsuit with high-visibility lines worn by chief engineers. Made from fire-resistant materials."
+	icon_state = "cargo"
 
 /obj/item/clothing/under/korch/scientist
 	name = "Scientist's clothes"
