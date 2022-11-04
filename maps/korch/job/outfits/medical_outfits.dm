@@ -18,10 +18,10 @@
 
 /singleton/hierarchy/outfit/job/korch/crew/medical/paramedic
 	name = OUTFIT_JOB_NAME("Paramedic - Korch")
-	uniform = /obj/item/clothing/under/rank/medical/paramedic
-	suit = /obj/item/clothing/suit/storage/toggle/fr_jacket
-	shoes = /obj/item/clothing/shoes/white
-	l_ear = /obj/item/device/radio/headset/headset_corpsman/alt
+	head = /obj/item/clothing/head/soft/paramedic
+	uniform = /obj/item/clothing/under/korch/doctor/paramedic
+	shoes = /obj/item/clothing/shoes/black
+	l_ear = /obj/item/device/radio/headset/headset_corpsman
 	id_types = list(/obj/item/card/id/korch/crew/medical/paramedic)
 	flags = OUTFIT_FLAGS_JOB_DEFAULT | OUTFIT_EXTENDED_SURVIVAL
 

@@ -23,7 +23,7 @@
 
 /singleton/hierarchy/outfit/job/korch/crew/supply/mining
 	name = OUTFIT_JOB_NAME("Miner")
-	uniform = /obj/item/clothing/under/rank/miner
+	uniform = /obj/item/clothing/under/korch/miner
 	shoes = /obj/item/clothing/shoes/workboots
 	id_types = list(/obj/item/card/id/korch/crew/supply/mining)
 	pda_type = /obj/item/modular_computer/pda/mining

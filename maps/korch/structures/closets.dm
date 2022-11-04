@@ -91,6 +91,7 @@
 		/obj/item/storage/firstaid/light,
 		/obj/item/storage/backpack/dufflebag,
 		/obj/item/clothing/shoes/dutyboots,
+		/obj/item/clothing/head/korch/pilot,
 		/obj/item/device/flashlight/flare
 	)
 
@@ -138,8 +139,8 @@
 		/obj/item/clothing/glasses/science,
 		/obj/item/clothing/mask/gas,
 		/obj/item/clothing/mask/gas,
-		/obj/item/clothing/under/rank/scientist/nanotrasen,
-		/obj/item/clothing/suit/storage/toggle/labcoat/science/nanotrasen
+		/obj/item/clothing/under/korch/scientist,
+		/obj/item/clothing/suit/storage/toggle/labcoat/korch
 	)
 
 //medical
@@ -159,13 +160,12 @@
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/glasses/hud/health/goggle,
 		/obj/item/clothing/glasses/hud/health/goggle,
-		/obj/item/clothing/under/rank/medical/scrubs/teal,
-		/obj/item/clothing/under/rank/medical/scrubs/lilac,
-		/obj/item/clothing/under/rank/medical/scrubs/purple,
+		/obj/item/clothing/head/soft/medsoft,
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/gloves/latex/nitrile,
-		/obj/item/clothing/suit/storage/toggle/labcoat,
-		/obj/item/clothing/suit/storage/toggle/fr_jacket/emrs
+		/obj/item/clothing/suit/storage/toggle/labcoat/korch,
+		/obj/item/clothing/suit/storage/toggle/fr_jacket/emrs,
+		/obj/item/clothing/under/korch/doctor
 	)
 
 /obj/structure/closet/secure_closet/paramedic/korch
@@ -183,7 +183,8 @@
 		/obj/item/storage/backpack/dufflebag,
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/glasses/hud/health/goggle,
-		/obj/item/clothing/under/rank/medical/paramedic,
+		/obj/item/clothing/under/korch/doctor/paramedic,
+		/obj/item/clothing/head/soft/paramedic,
 		/obj/item/clothing/suit/storage/toggle/fr_jacket,
 		/obj/item/clothing/suit/storage/toggle/fr_jacket/ems,
 		/obj/item/clothing/gloves/latex,
@@ -286,6 +287,80 @@
 		/obj/item/clothing/glasses/welding,
 	)
 
+/obj/structure/closet/secure_closet/captains/korch
+	name = "captain's locker"
+	req_access = list(access_captain)
+	closet_appearance = /singleton/closet_appearance/secure_closet/command
+
+/obj/structure/closet/secure_closet/captains/korch/WillContain()
+	return list(
+		new/datum/atom_creator/weighted(list(/obj/item/storage/backpack/command, /obj/item/storage/backpack/satchel/com)),
+		new/datum/atom_creator/simple(/obj/item/storage/backpack/dufflebag/com, 50),
+		/obj/item/clothing/suit/storage/korch/capsuit,
+		/obj/item/clothing/head/korch/caphat,
+		/obj/item/clothing/suit/armor/vest/nt,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/shoes/brown,
+		/obj/item/device/radio/headset/heads/korchexec,
+		/obj/item/device/radio/headset/heads/korchexec/alt,
+		/obj/item/clothing/gloves/white,
+		/obj/item/gun/energy/gun,
+		/obj/item/clothing/suit/armor/captain,
+		/obj/item/melee/telebaton
+	)
+
+/obj/structure/closet/secure_closet/security/korch
+	name = "security officer's locker"
+	req_access = list(access_brig)
+	closet_appearance = /singleton/closet_appearance/secure_closet/security
+
+/obj/structure/closet/secure_closet/security/korch/WillContain()
+	return list(
+		new/datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),
+		new/datum/atom_creator/simple(/obj/item/storage/backpack/dufflebag/sec, 50),
+		/obj/item/clothing/suit/,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/head/korch/securitycap,
+		/obj/item/device/radio/headset/headset_sec,
+		/obj/item/device/radio/headset/headset_sec/alt,
+		/obj/item/storage/belt/holster/security,
+		/obj/item/clothing/suit/storage/hooded/hoodie/security,
+		/obj/item/device/flash,
+		/obj/item/reagent_containers/spray/pepper,
+		/obj/item/grenade/chem_grenade/teargas,
+		/obj/item/melee/baton/loaded,
+		/obj/item/clothing/glasses/hud/security/prot/sunglasses,
+		/obj/item/taperoll/police,
+		/obj/item/device/hailer,
+		/obj/item/gun/energy/taser,
+		/obj/item/device/holowarrant,
+	)
+
 // supply
+
+/obj/structure/closet/secure_closet/miner/korch
+	name = "miner's equipment"
+	closet_appearance = /singleton/closet_appearance/secure_closet/mining
+	req_access = list(access_mining)
+
+/obj/structure/closet/secure_closet/miner/korch/WillContain()
+	return list(
+		new /datum/atom_creator/weighted(list(
+				/obj/item/storage/backpack/industrial,
+				/obj/item/storage/backpack/satchel/eng
+			)),
+		/obj/item/storage/belt/utility/full,
+		/obj/item/clothing/under/korch/miner,
+		/obj/item/device/radio/headset/headset_mining,
+		/obj/item/device/radio/headset/headset_mining/alt,
+		/obj/item/clothing/gloves/thick,
+		/obj/item/clothing/shoes/black,
+		/obj/item/device/scanner/gas,
+		/obj/item/storage/ore,
+		/obj/item/device/flashlight/lantern,
+		/obj/item/shovel,
+		/obj/item/pickaxe,
+		/obj/item/clothing/glasses/meson
+	)
 
 

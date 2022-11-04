@@ -50,18 +50,19 @@
 	company_short = "NT"
 
 	use_overmap = 1
-	num_exoplanets = 1
+	num_exoplanets = 5
 	overmap_size = 35
 	away_site_budget = 4
 	min_offmap_players = 12
 
 	map_admin_faxes = list("NanoTrasen Central Office")
 
-	shuttle_docked_message = "Attention all hands: Evacuation preparation complete. Time before departure: approximately %ETD%."
-	shuttle_leaving_dock = "Attention all hands: the escape pods have been launched, arriving at rendezvous point in %ETA%."
-	shuttle_called_message = "Attention all hands: evacuation procedures are now in effect. Escape pods will unlock in %ETA%"
-	shuttle_recall_message = "Attention all hands: evacuation aborted, return to normal operating conditions."
+	//These should probably be moved into the evac controller...
+	shuttle_docked_message = "Attention all hands: Jump preparation complete. The bluespace drive is now spooling up, secure all stations for departure. Time to jump: approximately %ETD%."
+	shuttle_leaving_dock = "Attention all hands: Jump initiated, exiting bluespace in %ETA%."
+	shuttle_called_message = "Attention all hands: Jump sequence initiated. Transit procedures are now in effect. Jump in %ETA%."
+	shuttle_recall_message = "Attention all hands: Jump sequence aborted, return to normal operating conditions."
 
-	evac_controller_type = /datum/evacuation_controller/lifepods
+	evac_controller_type = /datum/evacuation_controller/starship/fast
 
 	id_hud_icons = 'maps/korch/icons/assignment_hud.dmi'

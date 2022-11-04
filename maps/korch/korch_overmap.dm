@@ -81,7 +81,7 @@
 	vessel_mass = 4000
 	max_speed = 1/(1 SECONDS)
 	burn_delay = 1 SECONDS
-	fore_dir = WEST
+	fore_dir = EAST
 	vessel_size = SHIP_SIZE_SMALL
 
 

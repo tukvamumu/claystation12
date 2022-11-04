@@ -84,9 +84,7 @@
 	#include "loadout/loadout_xeno.dm"
 	#include "loadout/~defines.dm"
 
-	#include "korch1-deck3.dmm"
-	#include "korch2-deck2.dmm"
-	#include "korch3-deck1.dmm"
+	#include "korch.dmm"
 	#include "z1_admin.dmm"
 	#include "z2_transit.dmm"
 	#include "../away/empty.dmm"

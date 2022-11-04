@@ -27,9 +27,9 @@
 
 /singleton/hierarchy/outfit/job/korch/crew/security/officer
 	name = OUTFIT_JOB_NAME("Security Officer")
-	uniform = /obj/item/clothing/under/rank/security2
-	suit = /obj/item/clothing/suit/armor/vest/old/security
+	uniform = /obj/item/clothing/under/korch/security
+	suit = /obj/item/clothing/suit/storage/korch/secvest
 	shoes = /obj/item/clothing/shoes/dutyboots
-	head = /obj/item/clothing/head/helmet/nt
+	head = /obj/item/clothing/head/korch/securitycap
 	id_types = list(/obj/item/card/id/korch/crew/security)
 	pda_type = /obj/item/modular_computer/pda/security

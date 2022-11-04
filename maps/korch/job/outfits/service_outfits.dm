@@ -19,4 +19,5 @@
 /singleton/hierarchy/outfit/job/korch/crew/service/chaplain
 	name = OUTFIT_JOB_NAME("Chaplain - Korch")
 	uniform = /obj/item/clothing/under/rank/chaplain
+	shoes = /obj/item/clothing/shoes/leather
 	id_types = list(/obj/item/card/id/korch/crew/service/chaplain)
