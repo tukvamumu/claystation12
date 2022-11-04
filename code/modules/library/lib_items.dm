@@ -160,7 +160,7 @@
 			to_chat(user, SPAN_NOTICE("The pages of [title] have been cut out!"))
 			return
 	if(src.dat)
-		show_browser(user, dat, "window=book;size=1000x550")
+		show_browser(user, "<meta charset='UTF-8'>" + dat, "window=book;size=1000x550")
 		user.visible_message("[user] opens a book titled \"[src.title]\" and begins reading intently.")
 		onclose(user, "book")
 	else
