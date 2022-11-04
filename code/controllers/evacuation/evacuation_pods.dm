@@ -23,6 +23,24 @@
 		EVAC_OPT_CANCEL_BLUESPACE_JUMP = new /datum/evacuation_option/cancel_bluespace_jump()
 	)
 
+/datum/evacuation_controller/starship/fast
+	name = "escape pod controller"
+
+	evac_prep_delay    = 5 MINUTES
+	evac_launch_delay  = 3 MINUTES
+	evac_transit_delay = 2 MINUTES
+
+	transfer_prep_additional_delay     = 3 MINUTES
+	autotransfer_prep_additional_delay = 3 MINUTES
+	emergency_prep_additional_delay    = 0 MINUTES
+
+	evacuation_options = list(
+		EVAC_OPT_ABANDON_SHIP = new /datum/evacuation_option/abandon_ship(),
+		EVAC_OPT_BLUESPACE_JUMP = new /datum/evacuation_option/bluespace_jump(),
+		EVAC_OPT_CANCEL_ABANDON_SHIP = new /datum/evacuation_option/cancel_abandon_ship(),
+		EVAC_OPT_CANCEL_BLUESPACE_JUMP = new /datum/evacuation_option/cancel_bluespace_jump()
+	)
+
 /datum/evacuation_controller/starship/finish_preparing_evac()
 	. = ..()
 	// Arm the escape pods.
