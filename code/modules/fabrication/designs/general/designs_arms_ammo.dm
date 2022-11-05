@@ -17,6 +17,15 @@
 	path = /obj/item/material/hatchet/machete/steel
 	hidden = TRUE
 
+/datum/fabricator_recipe/arms_ammo/hidden/cell
+	name = "ammunition (laser, cheap powercell)"
+	path = /obj/item/cell/gun
+
+/datum/fabricator_recipe/arms_ammo/hidden/cells
+	name = "ammunition (laser, standard powercell)"
+	path = /obj/item/cell/gun/standard
+
+
 /datum/fabricator_recipe/arms_ammo/hidden/shotgun
 	name = "ammunition (shotgun, beanbag)"
 	path = /obj/item/ammo_casing/shotgun/beanbag

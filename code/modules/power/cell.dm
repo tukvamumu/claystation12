@@ -155,6 +155,60 @@
 	maxcharge = 100
 	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
 
+/obj/item/cell/gun
+	name = "cheap gun power cell"
+	desc = "A weird shaped power cell designed to power small energy weapons."
+	icon_state = "gun"
+	w_class = ITEM_SIZE_SMALL
+	force = 0
+	throw_speed = 5
+	throw_range = 7
+	maxcharge = 80
+	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 5)
+
+/obj/item/cell/gun/Initialize()
+	. = ..()
+	if (type == /obj/item/cell/gun)
+		return INITIALIZE_HINT_QDEL
+
+/obj/item/cell/gun/variable/Initialize(mapload, charge_amount)
+	name = "gun power cell"
+	desc = "a gun powercell manufactured specifically for the gun it was taken out of."
+	maxcharge = charge_amount
+	return ..(mapload)
+
+/obj/item/cell/gun/standard
+	name = "standard gun power cell"
+	maxcharge = 140
+
+/obj/item/cell/gun/high
+	name = "advanced gun power cell"
+	desc = "A weird shaped power cell designed to power more energy-demanding guns."
+	icon_state = "hgun"
+	maxcharge = 260
+	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
+
+/obj/item/cell/gun/super
+	name = "very advanced gun power cell"
+	desc = "A very advanced gun power cell designed to power the big guns."
+	icon_state = "sgun"
+	maxcharge = 360
+	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 8, MATERIAL_ALUMINIUM = 10)
+
+/obj/item/cell/gun/infinite
+	name = "experimental gun power cell"
+	desc = "This special experimental gun power cell has both very large capacity, and ability to recharge itself by draining power from contained bluespace pocket."
+	icon_state = "igun"
+	origin_tech =  null
+	maxcharge = 1000
+	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 8, MATERIAL_ALUMINIUM = 20)
+
+/obj/item/cell/gun/infinite/check_charge()
+	return 1
+
+/obj/item/cell/gun/infinite/use(amount)
+	return amount
+
 /obj/item/cell/crap
 	name = "old power cell"
 	desc = "A cheap old power cell. It's probably been in use for quite some time now."

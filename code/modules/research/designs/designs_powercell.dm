@@ -64,3 +64,30 @@
 	materials = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
 	build_path = /obj/item/cell/device/high
 	sort_string = "DAAAF"
+
+/datum/design/item/powercell/gun/standard
+	name = "standard"
+	id = "gun_cell_standard"
+	req_tech = list(TECH_POWER = 1)
+	materials = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 5)
+	build_path = /obj/item/cell/gun/standard
+	sort_string = "DAAAG"
+
+/datum/design/item/powercell/gun/high
+	name = "high-capacity"
+	build_type = PROTOLATHE | MECHFAB
+	id = "gun_cell_high"
+	req_tech = list(TECH_POWER = 3)
+	materials = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
+	build_path = /obj/item/cell/gun/high
+	sort_string = "DAAAH"
+
+/datum/design/item/powercell/gun/super
+	name = "super-capacity"
+	build_type = PROTOLATHE | MECHFAB
+	id = "gun_cell_super"
+	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
+	materials = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6, MATERIAL_GOLD = 5, MATERIAL_ALUMINIUM = 5)
+	build_path = /obj/item/cell/gun/super
+	sort_string = "DAAAI"
+

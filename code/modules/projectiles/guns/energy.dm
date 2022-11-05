@@ -35,7 +35,7 @@
 	if(cell_type)
 		power_supply = new cell_type(src)
 	else
-		power_supply = new /obj/item/cell/device/variable(src, max_shots*charge_cost)
+		power_supply = new /obj/item/cell/gun/variable(src, max_shots*charge_cost)
 	if(self_recharge)
 		START_PROCESSING(SSobj, src)
 	update_icon()
@@ -104,3 +104,28 @@
 		else
 			icon_state = "[initial(icon_state)][ratio]"
 		update_held_icon()
+	if(charge_meter && !power_supply)
+		if(modifystate)
+			icon_state = "[modifystate][0]"
+		else
+			icon_state = "[initial(icon_state)][0]"
+		update_held_icon()
+
+/obj/item/gun/energy/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/cell/gun))
+		if(!power_supply && user.unEquip(W))
+			W.forceMove(src)
+			power_supply = W
+			to_chat(user, SPAN_NOTICE("You install a cell into the [src]."))
+			update_icon()
+		else
+			to_chat(user, SPAN_NOTICE("[src] already has a cell."))
+	else if(isScrewdriver(W))
+		if(power_supply)
+			power_supply.update_icon()
+			power_supply.dropInto(loc)
+			power_supply = null
+			to_chat(user, SPAN_NOTICE("You remove the cell from the [src]."))
+			update_icon()
+	else
+		..()
