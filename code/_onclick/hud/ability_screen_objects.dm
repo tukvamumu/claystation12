@@ -258,6 +258,7 @@
 
 //Changeling Abilities
 /obj/screen/ability/verb_based/changeling
+	icon = 'icons/mob/screen_spells_ling.dmi'
 	icon_state = "ling_spell_base"
 	background_base_state = "ling"
 
@@ -279,6 +280,10 @@
 	ability_objects.Add(A)
 	if(my_mob.client)
 		toggle_open(2) //forces the icons to refresh on screen
+
+/obj/screen/movable/ability_master/proc/remove_all_ling_abilities()
+	for(var/obj/screen/ability/verb_based/changeling/A in ability_objects)
+		remove_ability(A)
 
 
 /////////Obj Abilities////////

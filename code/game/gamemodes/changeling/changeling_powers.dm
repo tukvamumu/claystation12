@@ -61,6 +61,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	if(!mind.changeling)	mind.changeling = new /datum/changeling(gender)
 
 	verbs += /datum/changeling/proc/EvolutionMenu
+	src.ability_master.add_ling_ability(src, /datum/changeling/proc/EvolutionMenu, "Evolution Menu", "changeling_evolmenu")
 	add_language(LANGUAGE_CHANGELING_GLOBAL)
 
 	var/lesser_form = !ishuman(src)
@@ -80,7 +81,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 			if(lesser_form && !P.allowduringlesserform)	continue
 			if(!(P in src.verbs))
 				src.verbs += P.verbpath
-
+				src.ability_master.add_ling_ability(src, P.verbpath, P.name, copytext("[P.verbpath]", 11))
 	for(var/language in languages)
 		mind.changeling.absorbed_languages |= language
 
@@ -97,7 +98,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	for(var/datum/power/changeling/P in mind.changeling.purchasedpowers)
 		if(P.isVerb)
 			verbs -= P.verbpath
-
+	src.ability_master.remove_all_ling_abilities()
 
 //Helper proc. Does all the checks and stuff for us to avoid copypasta
 /mob/proc/changeling_power(required_chems=0, required_dna=0, max_genetic_damage=100, max_stat=0)
@@ -250,7 +251,6 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	T.death(0)
 	T.Drain()
 	return 1
-
 
 //Change our DNA to that of somebody we've absorbed.
 /mob/proc/changeling_transform()
@@ -442,12 +442,14 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 			to_chat(C, SPAN_NOTICE(FONT_GIANT("We are ready to rise.  Use the <b>Revive</b> verb when you are ready.")))
 			C.verbs += /mob/proc/changeling_revive
+			src.ability_master.add_ling_ability(src, /mob/proc/changeling_revive, "Revive", "changeling_revive")
 	return 1
 
 /mob/proc/changeling_revive()
 	set category = "Changeling"
 	set name = "Revive"
 
+	src.ability_master.remove_all_ling_abilities()
 	var/mob/living/carbon/C = src
 	// restore us to health
 	C.revive()
@@ -639,7 +641,6 @@ var/global/list/datum/absorbed_dna/hivemind_bank = list()
 	set name = "Mimic Voice"
 	set desc = "Shape our vocal glands to form a voice of someone we choose. We cannot regenerate chemicals when mimicing."
 
-
 	var/datum/changeling/changeling = changeling_power()
 	if(!changeling)	return
 
@@ -722,6 +723,7 @@ var/global/list/datum/absorbed_dna/hivemind_bank = list()
 	set category = "Changeling"
 	set name = "Hallucination Sting (15)"
 	set desc = "Causes terror in the target."
+
 
 	var/mob/living/carbon/human/T = changeling_sting(15, /mob/proc/changeling_lsdsting, sting_name = "Hallucination Sting")
 	if(!T)	return 0

@@ -40,14 +40,14 @@ var/global/list/datum/power/changeling/powerinstances = list()
 	name = "Hive Channel"
 	desc = "We can channel a DNA into the airwaves, allowing our fellow changelings to absorb it and transform into it as if they acquired the DNA themselves."
 	helptext = "Allows other changelings to absorb the DNA you channel from the airwaves. Will not help them towards their absorb objectives."
-	genomecost = 0
+	genomecost = 1
 	verbpath = /mob/proc/changeling_hiveupload
 
 /datum/power/changeling/hive_download
 	name = "Hive Absorb"
 	desc = "We can absorb a single DNA from the airwaves, allowing us to use more disguises with help from our fellow changelings."
 	helptext = "Allows you to absorb a single DNA and use it. Does not count towards your absorb objective."
-	genomecost = 0
+	genomecost = 1
 	verbpath = /mob/proc/changeling_hivedownload
 
 /datum/power/changeling/lesser_form
