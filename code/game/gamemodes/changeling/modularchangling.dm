@@ -34,6 +34,14 @@ var/global/list/datum/power/changeling/powerinstances = list()
 	allowduringlesserform = 1
 	verbpath = /mob/proc/changeling_fakedeath
 
+/datum/power/changeling/reproduce
+	name = "Reproduce"
+	desc = "We inject a human with special microorganisms that will try to take control over them and make them one of us."
+	helptext = "Can be used on dead humans too, but requires two genetic points to use on an absorbed human."
+	genomecost = 5
+	verbpath = /mob/proc/changeling_reproduce
+
+
 // Hivemind
 
 /datum/power/changeling/hive_upload

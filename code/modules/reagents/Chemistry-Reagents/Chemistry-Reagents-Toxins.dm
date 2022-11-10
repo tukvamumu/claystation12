@@ -1179,3 +1179,47 @@
 	color = "#837e79"
 	value = 4
 	strength = 7
+
+/* Changeling */
+/datum/reagent/lingma
+	name = "Lingma"
+	description = "An organic lubricating substance filled with parasitic changeling microorganisms."
+	taste_description = "salt"
+	reagent_state = LIQUID
+	color = "#eeeeee"
+	metabolism = REM * 0.2
+	value = 2
+	should_admin_log = TRUE
+
+/datum/reagent/lingma/affect_blood(mob/living/carbon/human/H, removed)
+	if(!istype(H) || !H.mind)
+		return
+	if(H.mind.changeling) // don't do anything to changelings
+		return
+	if(H.chem_doses[type] < 0.8 || prob (30))
+		return
+	if (prob(70))
+		to_chat(H, SPAN_DANGER("You feel like something is trying to take control over you"))
+		H.visible_message(SPAN_DANGER("[H]'s flesh moves weirdly!"))
+		H.confused += 15
+
+	var/list/meatchunks = list()
+	for(var/limb_tag in list(BP_R_ARM, BP_R_HAND, BP_L_ARM, BP_L_HAND, BP_R_LEG, BP_R_FOOT,BP_L_LEG, BP_L_FOOT))
+		var/obj/item/organ/external/E = H.get_organ(limb_tag)
+		if(E && !E.is_stump() && !BP_IS_ROBOTIC(E) && E.species.name)
+			meatchunks += E
+	if(meatchunks.len)
+		var/obj/item/organ/external/O = pick(meatchunks)
+		if(prob(50))
+			O.add_pain(30)
+			to_chat(H, SPAN_DANGER("It's like someone else's trying to use your [O.name]!"))
+
+	if(prob(20))
+		if(jobban_isbanned(H, MODE_CHANGELING) || !H.client)
+			return
+		to_chat(H, SPAN_DANGER("You have lost control over your mind!"))
+		GLOB.changelings.add_antagonist(H.mind, null, 1, null, null, null, 1)
+		H.mind.changeling.geneticpoints = 15
+		H.revive()
+		return
+	H.chem_doses[type] = 0

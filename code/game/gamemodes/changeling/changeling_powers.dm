@@ -11,7 +11,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	var/changelingID = "Changeling"
 	var/geneticdamage = 0
 	var/isabsorbing = 0
-	var/geneticpoints = 25
+	var/geneticpoints = 27
 	var/purchasedpowers = list()
 	var/mimicing = ""
 
@@ -802,4 +802,116 @@ var/global/list/datum/absorbed_dna/hivemind_bank = list()
 
 	var/datum/absorbed_dna/newDNA = new(T.real_name, T.dna, T.species.name, T.languages)
 	absorbDNA(newDNA)
+	return 1
+
+// Make a new ling to assist us
+/mob/proc/changeling_reproduce()
+	set category = "Changeling"
+	set name = "Reproduce (45)"
+
+	var/delay = 10
+	var/isbraindead
+
+	var/datum/changeling/changeling = changeling_power(45,0,100)
+	if(!changeling)	return
+
+	var/obj/item/grab/G = src.get_active_hand()
+	if(!istype(G))
+		to_chat(src, SPAN_WARNING("We must be grabbing a creature in our active hand to use them."))
+		return
+
+	var/mob/living/carbon/human/T = G.affecting
+	if(!istype(T))
+		to_chat(src, SPAN_WARNING("[T] is not compatible with our biology."))
+		return
+
+	if((T.species.species_flags & SPECIES_FLAG_NO_SCAN) || T.isSynthetic())
+		to_chat(src, SPAN_WARNING("We cannot use this creature!"))
+		return
+
+	if(!G.can_absorb())
+		to_chat(src, SPAN_WARNING("We must have a tighter grip to absorb this creature."))
+		return
+		
+	if(changeling.isabsorbing)
+		to_chat(src, SPAN_WARNING("We are busy!"))
+		return
+
+	if(MUTATION_HUSK in T.mutations && changeling.geneticpoints < 2)
+		to_chat(src, SPAN_WARNING("We require atleast 2 genetic points to restore husked bodies!"))
+		return
+
+	var/obj/item/organ/external/affecting = T.get_organ(src.zone_sel.selecting)
+	if(!affecting)
+		to_chat(src, SPAN_WARNING("They are missing that body part!"))
+
+	if(!T.mind || jobban_isbanned(T, MODE_CHANGELING))
+		to_chat(src, SPAN_WARNING("It's useless, they're lacking required brain activities"))
+		return
+
+	if(T.mind.changeling)
+		to_chat(src, SPAN_WARNING("They're already one of us"))
+		return
+
+	if(!T.should_have_organ(BP_BRAIN))
+		to_chat(src, SPAN_WARNING("It's useless, they're missing their brains"))	
+		return
+
+	var/obj/item/organ/internal/brain/brain = T.internal_organs_by_name[BP_BRAIN]
+	if(!brain || T.stat == DEAD)
+		isbraindead = 1
+
+	changeling.isabsorbing = 1
+	for(var/stage = 1, stage<=3, stage++)
+		switch(stage)
+			if(1)
+				to_chat(src, SPAN_NOTICE("This creature is compatible. We must hold still..."))
+			if(2)
+				to_chat(src, SPAN_NOTICE("We extend a proboscis."))
+				src.visible_message(SPAN_WARNING("[src] extends a proboscis!"))
+			if(3)
+				if(isbraindead)
+					delay = 30
+					to_chat(src, SPAN_NOTICE("We stab [T] with the proboscis and prepare to restart their life-supporting systems."))
+				else
+					delay = 15
+					to_chat(src, SPAN_NOTICE("We stab [T] with the proboscis."))
+				src.visible_message(SPAN_DANGER("[src] stabs [T] with the proboscis!"))
+				to_chat(T, SPAN_DANGER("You feel a sharp stabbing pain!"))
+				affecting.take_external_damage(10, 0, DAMAGE_FLAG_SHARP, "large organic needle")
+		if(!do_after(src, delay SECONDS, T, DO_PUBLIC_UNIQUE))
+			to_chat(src, SPAN_WARNING("Our impregnation of [T] has been interrupted!"))
+			changeling.isabsorbing = 0
+			return
+
+	changeling.isabsorbing = 0
+
+	if(MUTATION_HUSK in T.mutations)
+		if(changeling.geneticpoints < 2) //checking again incase someone has spent their points during the injecting process
+			to_chat(src, SPAN_WARNING("We require atleast 2 genetic points to restore husked bodies!"))
+			return			
+		T.mutations &= ~MUTATION_HUSK
+		changeling.geneticpoints -=	2
+
+	if(isbraindead)
+		T.mutations &= ~MUTATION_HUSK
+		T.revive()
+		T.visible_message(SPAN_NOTICE("[T] suddenly starts breathing again"))
+		T.sleeping += 10
+		if(!T.ckey)
+			for(var/mob/observer/ghost/ghost as mob in GLOB.ghost_mobs)
+				if(T.mind == ghost.mind)
+					ghost.reenter_corpse()
+					break
+		T.adjustFireLoss(99)
+		T.adjustBrainLoss(99)
+		T.weakened += 120
+		T.drowsyness += 60
+
+	if(T.reagents)	T.reagents.add_reagent(/datum/reagent/lingma, 30)
+	changeling.chem_charges -= 45
+	to_chat(src, SPAN_NOTICE("We have impregnated [T]!"))
+	src.visible_message(SPAN_DANGER("[src] injects fluids in [T]!"))
+	to_chat(T, SPAN_DANGER("You have been injected with fluids by [src]!"))
+
 	return 1
