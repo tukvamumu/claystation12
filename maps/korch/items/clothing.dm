@@ -38,7 +38,7 @@
 
 /obj/item/clothing/head/korch/pilot
 	name = "\improper Pilot's helmet"
-	desc = "A robust helmet. Drive safe!."
+	desc = "A robust helmet. Drive safe!"
 	icon_state = "pilotkorch"
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
@@ -65,6 +65,11 @@
 	icon = 'maps/korch/icons/obj/obj_under_korch.dmi'
 	item_icons = list(slot_w_uniform_str = 'maps/korch/icons/mob/onmob_under_korch.dmi')
 
+/obj/item/clothing/under/korch/turtleneck
+	name = "Beige turtleneck"
+	desc = "A comfy turtleneck."
+	icon_state = "turtleneck"
+	worn_state = "turtleneck"
 
 /obj/item/clothing/under/korch/capshirt
 	name = "Captain's uniform"

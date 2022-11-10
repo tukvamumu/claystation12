@@ -50,7 +50,7 @@
 	company_short = "NT"
 
 	use_overmap = 1
-	num_exoplanets = 5
+	num_exoplanets = 1
 	overmap_size = 35
 	away_site_budget = 4
 	min_offmap_players = 12

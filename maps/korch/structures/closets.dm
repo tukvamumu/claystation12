@@ -318,7 +318,7 @@
 	return list(
 		new/datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),
 		new/datum/atom_creator/simple(/obj/item/storage/backpack/dufflebag/sec, 50),
-		/obj/item/clothing/suit/,
+		/obj/item/clothing/suit/storage/korch/secvest,
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/head/korch/securitycap,
 		/obj/item/device/radio/headset/headset_sec,
@@ -334,6 +334,7 @@
 		/obj/item/device/hailer,
 		/obj/item/gun/energy/taser,
 		/obj/item/device/holowarrant,
+		/obj/item/clothing/under/korch/security,
 	)
 
 // supply

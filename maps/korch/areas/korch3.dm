@@ -164,6 +164,11 @@
 	ambience = list('sound/ambience/signal.ogg')
 	req_access = list(access_medical_equip)
 
+/area/medical/psych
+	name = "\improper First Deck - Psych's room"
+	icon_state = "medbay4"
+	req_access = list(access_medical_equip)
+
 /area/rnd/development
 	name = "\improper First Deck - Fabricator Lab"
 	icon_state = "devlab"
@@ -178,6 +183,10 @@
 
 /area/rnd/research
 	name = "\improper First Deck - Research Hallway"
+	icon_state = "research"
+
+/area/rnd/locker
+	name = "\improper First Deck - Research Locker Room"
 	icon_state = "research"
 
 /area/crew_quarters/heads/office/rd

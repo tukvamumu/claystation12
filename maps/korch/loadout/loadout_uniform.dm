@@ -49,4 +49,7 @@
 /datum/gear/uniform/corp_overalls
 	allowed_roles = list(/datum/job/mining)
 
+/datum/gear/uniform/beige_neck
+	display_name = "Beige turtleneck"
+	path = /obj/item/clothing/under/korch/turtleneck
 
