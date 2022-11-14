@@ -1,15 +1,18 @@
 /singleton/hierarchy/outfit/spec_op_officer
 	name = "Spec Ops - Officer"
 	uniform = /obj/item/clothing/under/syndicate/combat
-	suit = /obj/item/clothing/suit/armor/swat/officer
+	suit = /obj/item/clothing/suit/armor/deathsquad/officer
+	suit_store = /obj/item/gun/energy/pulse_rifle
 	l_ear = /obj/item/device/radio/headset/ert
-	glasses = /obj/item/clothing/glasses/thermal/plain/eyepatch
+	glasses = /obj/item/clothing/glasses/hud/security/prot/sunglasses
 	mask = /obj/item/clothing/mask/smokable/cigarette/cigar/havana
 	head = /obj/item/clothing/head/beret/deathsquad
-	belt = /obj/item/gun/energy/pulse_rifle/pistol
+	belt = /obj/item/gun/projectile/revolver
 	back = /obj/item/storage/backpack/satchel
-	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/thick/combat
+	shoes = /obj/item/clothing/shoes/combat/plus
+	gloves = /obj/item/clothing/gloves/thick/combat/plus
+	holster = /obj/item/clothing/accessory/storage/holster/armpit
+	backpack_contents = list(/obj/item/storage/firstaid/combat = 1,/obj/item/ammo_magazine/speedloader/magnum = 2)
 
 	id_slot = slot_wear_id
 	id_types = list(/obj/item/card/id/centcom/ERT)
