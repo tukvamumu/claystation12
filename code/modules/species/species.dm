@@ -373,7 +373,9 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 		if (extendedtank)	H.equip_to_slot_or_del(new /obj/item/storage/box/engineer(H), slot_r_hand)
 		else	H.equip_to_slot_or_del(new /obj/item/storage/box/survival(H), slot_r_hand)
 
-/datum/species/proc/create_organs(mob/living/carbon/human/H) //Handles creation of mob organs.
+/datum/species/proc/create_organs(mob/living/carbon/human/H) //Handles creation of mob organs
+	for (var/obj/item/organ/internal/augment/A in H.internal_organs)
+		A.removed(H, 1) // drop all augments
 
 	H.mob_size = mob_size
 	for(var/obj/item/organ/organ in H.contents)
@@ -402,6 +404,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 			warning("[O.type] has a default organ tag \"[O.organ_tag]\" that differs from the species' organ tag \"[organ_tag]\". Updating organ_tag to match.")
 			O.organ_tag = organ_tag
 		H.internal_organs_by_name[organ_tag] = O
+
 
 	for(var/name in H.organs_by_name)
 		H.organs |= H.organs_by_name[name]

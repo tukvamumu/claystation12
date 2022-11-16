@@ -37,3 +37,12 @@
 	materials = list (MATERIAL_STEEL = 12500, MATERIAL_GLASS = 7500, MATERIAL_SILVER = 1500, MATERIAL_GOLD = 1500, MATERIAL_DIAMOND = 750)
 	build_path = /obj/item/scalpel/manager
 	sort_string = "MBEAD"
+
+/datum/design/item/surgery/autodoc
+	name = "Universal Implant Autodoc"
+	desc = "A device that can automatically implant augment organs"
+	id = "imlant_autodoc"
+	req_tech = list(TECH_BIO = 5, TECH_MATERIAL = 5, TECH_MAGNET = 5)
+	materials = list(MATERIAL_STEEL = 12500, MATERIAL_GLASS = 7500, MATERIAL_SILVER = 2000, MATERIAL_GOLD = 1500, MATERIAL_DIAMOND = 50)
+	build_path = /obj/item/device/augment_implanter/universal
+	sort_string = "MBEAE"
