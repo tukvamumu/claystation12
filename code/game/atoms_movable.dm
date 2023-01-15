@@ -36,7 +36,7 @@
 
 /atom/movable/Destroy()
 	if(!(atom_flags & ATOM_FLAG_INITIALIZED))
-		crash_with("Was deleted before initalization")
+		crash_with("\A [src] was deleted before initalization")
 	walk(src, 0)
 	for(var/A in src)
 		qdel(A)
@@ -245,3 +245,7 @@
 
 /atom/movable/proc/get_bullet_impact_effect_type()
 	return BULLET_IMPACT_NONE
+
+
+/atom/movable/proc/CheckDexterity(mob/living/user)
+	return TRUE

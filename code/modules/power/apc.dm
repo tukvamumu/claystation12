@@ -731,7 +731,7 @@
 		"totalCharging" = round(lastused_charging),
 		"coverLocked" = coverlocked,
 		"failTime" = failure_timer * 2,
-		"siliconUser" = istype(user, /mob/living/silicon),
+		"siliconUser" = (istype(user, /mob/living/silicon) || (isghost(user) && isadmin(user))),
 		"powerChannels" = list(
 			list(
 				"title" = "Equipment",
@@ -838,7 +838,7 @@
 	if(..())
 		return 1
 
-	if(!istype(usr, /mob/living/silicon) && (locked && !emagged))
+	if(!istype(usr, /mob/living/silicon) && (locked && !emagged) && !(isghost(usr) && isadmin(usr)))
 		// Shouldn't happen, this is here to prevent href exploits
 		to_chat(usr, "You must unlock the panel to use this!")
 		return 1
@@ -887,7 +887,7 @@
 				locked = !locked
 				update_icon()
 
-	return 0
+	return STATUS_UPDATE
 
 /obj/machinery/power/apc/proc/force_update_channels()
 	autoflag = -1 // This clears state, forcing a full recalculation
@@ -1045,22 +1045,6 @@
 /obj/machinery/power/apc/emp_act(severity)
 	if(emp_hardened)
 		return
-	var/obj/item/cell/cell = get_cell()
-	// Fail for 8-12 minutes (divided by severity)
-	// Division by 2 is required, because machinery ticks are every two seconds. Without it we would fail for 16-24 minutes.
-	if(is_critical)
-		// Critical APCs are considered EMP shielded and will be offline only for about half minute. Prevents AIs being one-shot disabled by EMP strike.
-		// Critical APCs are also more resilient to cell corruption/power drain.
-		energy_fail(rand(240, 360) / severity / CRITICAL_APC_EMP_PROTECTION)
-		if(cell)
-			cell.emp_act(severity+2)
-	else
-		// Regular APCs fail for normal time.
-		energy_fail(rand(240, 360) / severity)
-		if(cell)
-			cell.emp_act(severity+1)
-
-	update_icon()
 	..()
 
 /obj/machinery/power/apc/ex_act(severity)

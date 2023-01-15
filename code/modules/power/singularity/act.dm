@@ -1,8 +1,14 @@
 #define I_SINGULO "singulo"
 
+/**
+ * Called when a singularity interacts with the atom.
+ */
 /atom/proc/singularity_act()
 	return
 
+/**
+ * Called when a singularity attempts to pull the atom toward it.
+ */
 /atom/proc/singularity_pull(S, current_size)
 	return
 
@@ -73,13 +79,13 @@
 
 /obj/item/storage/backpack/holding/singularity_act(S, current_size)
 	var/dist = max((current_size - 2), 1)
-	explosion(src.loc,(dist),(dist*2),(dist*4))
+	explosion(src.loc, dist * 9)
 	return 1000
 
 /turf/singularity_act(S, current_size)
 	if(!is_plating())
 		for(var/obj/O in contents)
-			if(O.level != 1)
+			if(O.level != ATOM_LEVEL_UNDER_TILE)
 				continue
 			if(O.invisibility == 101)
 				O.singularity_act(src, current_size)
@@ -92,6 +98,11 @@
 /*******************
 * Nar-Sie Act/Pull *
 *******************/
+/**
+ * Whether or not a singularity can consume the atom.
+ *
+ *  Returns boolean.
+ */
 /atom/proc/singuloCanEat()
 	return 1
 

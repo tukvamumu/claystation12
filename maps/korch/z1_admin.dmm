@@ -2534,10 +2534,6 @@
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/shuttle/white,
 /area/shuttle/administration/centcom)
-"auF" = (
-/obj/structure/bed/roller,
-/turf/simulated/floor/shuttle/white,
-/area/shuttle/administration/centcom)
 "auG" = (
 /obj/machinery/computer/shuttle_control{
 	dir = 8;
@@ -3416,13 +3412,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"axl" = (
-/obj/machinery/vending/assist,
-/turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
-	},
-/area/centcom/specops)
 "axm" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/unsimulated/floor{
@@ -3537,12 +3526,6 @@
 	},
 /area/centcom/control)
 "axA" = (
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/centcom/test)
-"axB" = (
-/obj/structure/bed/roller,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -4936,23 +4919,7 @@
 /area/centcom/specops)
 "aCk" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/roller,
 /obj/item/defibrillator/loaded,
-/turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
-	},
-/area/centcom/specops)
-"aCl" = (
-/obj/structure/iv_drip,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -6213,12 +6180,6 @@
 	icon_state = "white"
 	},
 /area/centcom/holding)
-"aHO" = (
-/obj/structure/bed/roller,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/centcom/holding)
 "aHR" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -6725,30 +6686,8 @@
 	icon_state = "white"
 	},
 /area/centcom/holding)
-"aJy" = (
-/obj/structure/iv_drip,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/centcom/holding)
 "aJz" = (
 /obj/structure/table/standard,
-/obj/item/reagent_containers/ivbag/blood/OPlus{
-	pixel_x = 4;
-	pixel_y = 2
-	},
-/obj/item/reagent_containers/ivbag/blood/OPlus{
-	pixel_x = 4;
-	pixel_y = 2
-	},
-/obj/item/reagent_containers/ivbag/blood/OMinus{
-	pixel_x = -5;
-	pixel_y = -1
-	},
-/obj/item/reagent_containers/ivbag/blood/OMinus{
-	pixel_x = -5;
-	pixel_y = -1
-	},
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -8011,7 +7950,6 @@
 /obj/machinery/computer/cryopod{
 	pixel_y = 32
 	},
-/obj/item/roller,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/merchant_station)
@@ -17039,7 +16977,7 @@ ayc
 aBv
 awp
 awp
-aCl
+awr
 avY
 aab
 aab
@@ -18238,7 +18176,7 @@ avY
 awn
 awM
 avY
-axl
+awr
 axF
 axY
 ayo
@@ -18832,7 +18770,7 @@ asW
 atd
 auk
 izl
-auF
+auD
 auD
 auD
 avk
@@ -23127,7 +23065,7 @@ aCz
 aIX
 aHM
 aHM
-aJy
+aHM
 aIx
 aII
 aII
@@ -24137,7 +24075,7 @@ aIL
 aIM
 aHM
 aHM
-aHO
+aHM
 aCz
 aab
 aab
@@ -24533,8 +24471,8 @@ aDE
 aGf
 aGf
 aCz
-aHO
-aHO
+aHM
+aHM
 aHM
 aHM
 aHM
@@ -24735,8 +24673,8 @@ aDE
 aCx
 aCx
 aCz
-aHO
-aHO
+aHM
+aHM
 aIn
 aID
 aID
@@ -25914,7 +25852,7 @@ awa
 aab
 aab
 awU
-axB
+axA
 axN
 axA
 ayt

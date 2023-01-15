@@ -252,7 +252,7 @@
 
 	// Effect 4: Medium scale explosion
 	spawn(0)
-		explosion(TS, explosion_power/2, explosion_power, explosion_power * 2, explosion_power * 4, 1)
+		explosion(TS, explosion_power * 3.5)
 		qdel(src)
 
 /obj/machinery/power/supermatter/examine(mob/user)
@@ -523,8 +523,8 @@
 		SPAN_WARNING("For a brief moment, you hear an oppressive, unnatural silence.")
 	)
 
-	user.drop_from_inventory(W)
-	Consume(W)
+	if (user.drop_from_inventory(W))
+		Consume(W)
 
 	user.apply_damage(150, DAMAGE_RADIATION, damage_flags = DAMAGE_FLAG_DISPERSED)
 

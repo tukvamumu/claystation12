@@ -698,7 +698,7 @@
 
 //Robots take half damage from basic attacks.
 /mob/living/silicon/robot/attack_generic(mob/user, damage, attack_message)
-	return ..(user,Floor(damage/2),attack_message)
+	..(user,Floor(damage/2),attack_message)
 
 /mob/living/silicon/robot/get_req_access()
 	return req_access
@@ -855,14 +855,12 @@
 			var/turf/tile = loc
 			if(isturf(tile))
 				tile.clean_blood()
+				tile.remove_cleanables()
 				if (istype(tile, /turf/simulated))
 					var/turf/simulated/S = tile
 					S.dirt = 0
 				for(var/A in tile)
-					if(istype(A, /obj/effect))
-						if(istype(A, /obj/effect/rune) || istype(A, /obj/effect/decal/cleanable))
-							qdel(A)
-					else if(istype(A, /obj/item))
+					if(istype(A, /obj/item))
 						var/obj/item/cleaned_item = A
 						cleaned_item.clean_blood()
 					else if(istype(A, /mob/living/carbon/human))

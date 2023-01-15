@@ -29,19 +29,20 @@ var/global/list/image/splatter_cache=list()
 	var/blood_size = BLOOD_SIZE_MEDIUM // A relative size; larger-sized blood will not override smaller-sized blood, except maybe at mapload.
 
 /obj/effect/decal/cleanable/blood/reveal_blood()
-	if(!fluorescent)
-		fluorescent = 1
+	if(!fluorescent || invisibility == 100)
+		set_invisibility(0)
+		fluorescent = ATOM_FLOURESCENCE_INACTIVE
 		basecolor = COLOR_LUMINOL
 		update_icon()
 
 /obj/effect/decal/cleanable/blood/clean_blood()
-	fluorescent = 0
+	fluorescent = ATOM_FLOURESCENCE_NONE
 	if(invisibility != 100)
 		set_invisibility(100)
 		amount = 0
 		STOP_PROCESSING(SSobj, src)
 		remove_extension(src, /datum/extension/scent)
-	..(ignore=1)
+		return TRUE
 
 /obj/effect/decal/cleanable/blood/hide()
 	return

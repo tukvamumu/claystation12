@@ -152,6 +152,8 @@
 
 /obj/item/ex_act(severity)
 	..()
+	if (health_max)
+		return
 	switch(severity)
 		if(EX_ACT_DEVASTATING)
 			qdel(src)
@@ -630,7 +632,7 @@ var/global/list/slot_flags_enumeration = list(
 
 /obj/item/reveal_blood()
 	if(was_bloodied && !fluorescent)
-		fluorescent = 1
+		fluorescent = ATOM_FLOURESCENCE_INACTIVE
 		blood_color = COLOR_LUMINOL
 		blood_overlay.color = COLOR_LUMINOL
 		update_icon()

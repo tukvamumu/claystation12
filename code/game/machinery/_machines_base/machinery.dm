@@ -12,6 +12,8 @@
 	layer = STRUCTURE_LAYER // Layer under items
 	init_flags = INIT_MACHINERY_PROCESS_SELF
 
+	health_resistances = DAMAGE_RESIST_ELECTRICAL
+
 	/// Boolean. Whether or not the machine has been emagged.
 	var/emagged = FALSE
 	/// Boolean. Whether or not the machine has been upgrade by a malfunctioning AI.
@@ -94,6 +96,16 @@
 	STOP_PROCESSING_MACHINE(src, MACHINERY_PROCESS_ALL)
 	. = ..()
 
+/obj/machinery/on_death()
+	..()
+	set_broken(TRUE, MACHINE_BROKEN_HEALTH)
+	queue_icon_update()
+
+/obj/machinery/on_revive()
+	..()
+	set_broken(FALSE, MACHINE_BROKEN_HEALTH)
+	queue_icon_update()
+
 /// Part of the machinery subsystem's process stack. Processes everything defined by `processing_flags`.
 /obj/machinery/proc/ProcessAll(wait)
 	if(processing_flags & MACHINERY_PROCESS_COMPONENTS)
@@ -119,10 +131,20 @@
 		pulse2.anchored = TRUE
 		pulse2.set_dir(pick(GLOB.cardinal))
 
-		addtimer(CALLBACK(GLOBAL_PROC, /proc/qdel, pulse2), 1 SECOND)
+		QDEL_IN(pulse2, 1 SECOND)
+
+		if (prob(100 / severity) && istype(wires))
+			if (prob(20))
+				wires.RandomCut()
+			else
+				wires.RandomPulse()
+
 	..()
 
 /obj/machinery/ex_act(severity)
+	..()
+	if (health_max)
+		return
 	switch(severity)
 		if(EX_ACT_DEVASTATING)
 			qdel(src)

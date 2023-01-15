@@ -122,15 +122,22 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/hangar)
+"adk" = (
+/obj/effect/floor_decal/corner/paleblue/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack{
+	dir = 8
+	},
+/obj/random/firstaid,
+/obj/item/roller_bed,
+/turf/simulated/floor/tiled/white/monotile,
+/area/medical/equipstorage)
 "adp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
-	},
-/obj/machinery/vending/assist{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
@@ -1281,7 +1288,6 @@
 /obj/effect/floor_decal/corner/research/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/vending/hydronutrients{
-	categories = 3;
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white/monotile,
@@ -4763,11 +4769,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/hop)
 "cbA" = (
-/obj/structure/bed/roller,
 /obj/machinery/vending/wallmed1{
 	name = "Emergency NanoMed";
 	pixel_y = 32
 	},
+/obj/structure/roller_bed,
 /turf/simulated/floor/tiled/white,
 /area/medical/medicalhallway)
 "ccG" = (
@@ -8352,10 +8358,10 @@
 	dir = 8;
 	icon_state = "railing0-1"
 	},
-/obj/machinery/shipsensors/weak,
 /obj/effect/floor_decal/techfloor{
 	dir = 10
 	},
+/obj/machinery/shipsensors,
 /turf/simulated/floor/tiled/techfloor,
 /area/guppy_hangar/start)
 "dyS" = (
@@ -10578,7 +10584,6 @@
 /area/thruster/d2starboard)
 "erB" = (
 /obj/structure/table/glass,
-/obj/structure/flora/pottedplant/deskferntrim,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/office/rd)
 "erI" = (
@@ -11564,9 +11569,22 @@
 /turf/simulated/floor/tiled/dark,
 /area/assembly/robotics)
 "eQx" = (
-/obj/structure/bed/roller,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/thirddeck/forestarboard)
+/obj/structure/table/rack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = -5
+	},
+/obj/random/medical,
+/obj/random/medical/lite,
+/obj/random/firstaid,
+/obj/item/storage/box/freezer/blood/human,
+/obj/item/storage/box/freezer/blood/skrell,
+/obj/item/storage/box/freezer/blood/unathi,
+/turf/simulated/floor/tiled/white/monotile,
+/area/medical/equipstorage)
 "eQy" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/corner/green/diagonal,
@@ -16081,7 +16099,6 @@
 /turf/simulated/floor/tiled,
 /area/security/locker)
 "gET" = (
-/obj/structure/iv_drip,
 /obj/machinery/vending/wallmed1{
 	dir = 8;
 	name = "Emergency NanoMed";
@@ -17438,7 +17455,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
 	},
-/obj/structure/iv_drip,
+/obj/structure/iv_stand,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "hln" = (
@@ -18614,12 +18631,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/wastetank)
 "hHT" = (
-/obj/structure/iv_drip,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/iv_stand,
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "hHU" = (
@@ -20690,7 +20707,6 @@
 /area/shuttle/petrov/eva)
 "iAT" = (
 /obj/structure/table/steel,
-/obj/structure/flora/pottedplant/deskleaf,
 /obj/effect/floor_decal/corner/blue/full,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
@@ -21319,18 +21335,6 @@
 "iPC" = (
 /obj/effect/floor_decal/corner/paleblue/mono,
 /obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/ivbag/blood/AMinus,
-/obj/item/reagent_containers/ivbag/blood/AMinus,
-/obj/item/reagent_containers/ivbag/blood/APlus,
-/obj/item/reagent_containers/ivbag/blood/APlus,
-/obj/item/reagent_containers/ivbag/blood/BMinus,
-/obj/item/reagent_containers/ivbag/blood/BMinus,
-/obj/item/reagent_containers/ivbag/blood/BPlus,
-/obj/item/reagent_containers/ivbag/blood/BPlus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OPlus,
-/obj/item/reagent_containers/ivbag/blood/OPlus,
 /obj/item/storage/box/bloodpacks,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/equipstorage)
@@ -24229,6 +24233,7 @@
 	dir = 8
 	},
 /obj/random/firstaid,
+/obj/item/roller_bed,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/equipstorage)
 "jUA" = (
@@ -26096,7 +26101,6 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/structure/iv_drip,
 /obj/machinery/light/spot,
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
@@ -30204,7 +30208,7 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/paleblue,
-/obj/structure/iv_drip,
+/obj/structure/iv_stand,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "mtS" = (
@@ -40923,7 +40927,6 @@
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/head/sauna)
 "qKz" = (
-/obj/structure/iv_drip,
 /turf/space,
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/medical)
@@ -42359,18 +42362,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/spot,
 /obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/ivbag/blood/AMinus,
-/obj/item/reagent_containers/ivbag/blood/APlus,
-/obj/item/reagent_containers/ivbag/blood/BMinus,
-/obj/item/reagent_containers/ivbag/blood/BPlus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OPlus,
-/obj/item/reagent_containers/ivbag/blood/AMinus,
-/obj/item/reagent_containers/ivbag/blood/APlus,
-/obj/item/reagent_containers/ivbag/blood/BMinus,
-/obj/item/reagent_containers/ivbag/blood/BPlus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OPlus,
 /turf/space,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/cargo)
@@ -46856,7 +46847,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "tgx" = (
-/obj/machinery/vending/assist,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -48062,7 +48052,6 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/structure/flora/pottedplant/deskferntrim,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 32
 	},
@@ -48880,18 +48869,6 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
-/obj/item/reagent_containers/ivbag/blood/BPlus,
-/obj/item/reagent_containers/ivbag/blood/BPlus,
-/obj/item/reagent_containers/ivbag/blood/OPlus,
-/obj/item/reagent_containers/ivbag/blood/OPlus,
-/obj/item/reagent_containers/ivbag/blood/BMinus,
-/obj/item/reagent_containers/ivbag/blood/BMinus,
-/obj/item/reagent_containers/ivbag/blood/APlus,
-/obj/item/reagent_containers/ivbag/blood/APlus,
-/obj/item/reagent_containers/ivbag/blood/AMinus,
-/obj/item/reagent_containers/ivbag/blood/AMinus,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "tVZ" = (
@@ -49715,6 +49692,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/roller_bed,
 /turf/simulated/floor/tiled/white,
 /area/medical/medicalhallway)
 "upO" = (
@@ -51452,16 +51430,18 @@
 	dir = 1
 	},
 /obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/ivbag/blood/AMinus,
-/obj/item/reagent_containers/ivbag/blood/APlus,
-/obj/item/reagent_containers/ivbag/blood/BMinus,
-/obj/item/reagent_containers/ivbag/blood/BPlus,
-/obj/item/reagent_containers/ivbag/blood/OPlus,
-/obj/item/reagent_containers/ivbag/blood/OMinus,
 /obj/item/reagent_containers/ivbag/nanoblood,
 /obj/item/reagent_containers/ivbag/nanoblood,
 /obj/item/reagent_containers/ivbag/nanoblood,
 /obj/item/reagent_containers/ivbag/nanoblood,
+/obj/item/reagent_containers/ivbag/blood/human/abneg,
+/obj/item/reagent_containers/ivbag/blood/human/abpos,
+/obj/item/reagent_containers/ivbag/blood/human/aneg,
+/obj/item/reagent_containers/ivbag/blood/human/apos,
+/obj/item/reagent_containers/ivbag/blood/human/bneg,
+/obj/item/reagent_containers/ivbag/blood/human/bpos,
+/obj/item/reagent_containers/ivbag/blood/human/oneg,
+/obj/item/reagent_containers/ivbag/blood/human/opos,
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "vbN" = (
@@ -52256,7 +52236,6 @@
 "vrI" = (
 /obj/effect/floor_decal/corner/red/mono,
 /obj/structure/table/steel,
-/obj/structure/flora/pottedplant/deskleaf,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/hos)
 "vrJ" = (
@@ -55038,7 +55017,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "wBE" = (
-/obj/structure/iv_drip,
 /obj/structure/hygiene/sink/kitchen{
 	pixel_x = 32
 	},
@@ -55327,7 +55305,7 @@
 	},
 /area/crew_quarters/bar/abandoned)
 "wHU" = (
-/obj/structure/iv_drip,
+/obj/structure/iv_stand,
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "wHW" = (
@@ -55531,6 +55509,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/item/roller_bed,
 /turf/simulated/floor/tiled/white,
 /area/medical/medicalhallway)
 "wLK" = (
@@ -56013,9 +55992,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/casinomaint)
 "wTs" = (
-/obj/machinery/vending/assist{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/black/half{
 	dir = 4
 	},
@@ -56025,6 +56001,9 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 24
+	},
+/obj/machinery/vending{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
@@ -58090,7 +58069,6 @@
 	},
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/adv,
-/obj/item/roller,
 /obj/item/bodybag/rescue/loaded,
 /obj/item/auto_cpr,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -71461,7 +71439,7 @@ gwb
 gwb
 gwb
 gwb
-eQx
+gys
 gys
 lCn
 rLV
@@ -161359,7 +161337,7 @@ hRi
 hRi
 qgW
 bGg
-bnO
+eQx
 aVD
 hvV
 trD
@@ -161967,7 +161945,7 @@ dru
 aVD
 jUx
 vSL
-dru
+adk
 aVD
 hRi
 fzK

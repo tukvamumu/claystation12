@@ -808,7 +808,7 @@
 	dir = 5
 	},
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup{
-	start_pressure = 7498.00
+	start_pressure = 7498
 	},
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/orange,
@@ -2157,6 +2157,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/machinery/radio_beacon,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/power)
 "eM" = (
@@ -3200,7 +3201,7 @@
 /area/quartermaster/expedition/eva)
 "hs" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup{
-	start_pressure = 7498.00
+	start_pressure = 7498
 	},
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -7128,7 +7129,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/expedition)
 "pM" = (
-/obj/structure/iv_drip,
+/obj/structure/iv_stand,
 /obj/structure/hygiene/sink/kitchen{
 	pixel_x = 32
 	},
@@ -12555,7 +12556,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/hallwaya)
 "Gq" = (
-/obj/machinery/shipsensors/weak,
+/obj/machinery/shipsensors,
 /turf/simulated/floor/plating,
 /area/guppy_hangar/start)
 "Gr" = (
@@ -16086,7 +16087,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/petrov/toxins)
 "Ur" = (
-/obj/machinery/vending/assist,
+/obj/machinery/vending/generic,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},

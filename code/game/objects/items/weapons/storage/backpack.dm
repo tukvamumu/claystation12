@@ -260,7 +260,7 @@
 
 /obj/item/storage/backpack/dufflebag/syndie/med/full
 	startswith = list(
-		/obj/item/roller,
+		/obj/item/roller_bed,
 		/obj/item/storage/box/syringes,
 		/obj/item/clothing/gloves/latex/nitrile,
 		/obj/item/clothing/glasses/hud/health,
@@ -445,7 +445,7 @@
 	desc = "A very slim satchel, that can easily fit into tight spaces."
 	icon_state = "satchel-flat"
 	item_state = "satchel-norm"
-	level = 1
+	level = ATOM_LEVEL_UNDER_TILE
 	w_class = ITEM_SIZE_NORMAL //Can fit in backpacks itself.
 	storage_slots = 5
 	max_w_class = ITEM_SIZE_NORMAL

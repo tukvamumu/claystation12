@@ -88,7 +88,7 @@
 	. = ..()
 
 /obj/machinery/door/firedoor/get_material()
-	return SSmaterials.get_material_by_name(MATERIAL_STEEL)
+	return SSmaterials.get_material_by_name(MATERIAL_PLASTEEL)
 
 /obj/machinery/door/firedoor/examine(mob/user, distance)
 	. = ..()
@@ -131,7 +131,7 @@
 		to_chat(user, "These people have opened \the [src] during an alert: [users_to_open_string].")
 
 /obj/machinery/door/firedoor/Bumped(atom/AM)
-	if(p_open || operating)
+	if (p_open || operating)
 		return
 	if(!density)
 		return ..()
@@ -142,12 +142,6 @@
 		if(A.fire || A.air_doors_activated)
 			return TRUE
 	return FALSE
-
-/obj/machinery/door/firedoor/attack_generic(mob/user, damage)
-	playsound(loc, 'sound/weapons/tablehit1.ogg', 50, 1)
-	if(MACHINE_IS_BROKEN(src))
-		qdel(src)
-	..()
 
 /obj/machinery/door/firedoor/attack_hand(mob/user)
 	add_fingerprint(user)

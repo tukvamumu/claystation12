@@ -8,16 +8,26 @@ var/global/explosion_in_progress = 0
 
 
 /proc/explosion_rec(turf/epicenter, power, shaped)
+	var/debug_coord = "\[[epicenter.x],[epicenter.y],[epicenter.z]\]"
+	log_debug(append_admin_tools("[debug_coord] RECURSIVE EXPLOSION: Starting. Power [power]."))
 	var/loopbreak = 0
 	while(explosion_in_progress)
-		if(loopbreak >= 15) return
+		log_debug("[debug_coord] RECURSIVE EXPLOSION: Explosion in progress, delaying. Loopbreak [loopbreak].")
+		if(loopbreak >= 15)
+			log_debug("[debug_coord] RECURSIVE EXPLOSION: Explosion still in progress. Exiting.")
+			return
 		sleep(10)
 		loopbreak++
 
-	if(power <= 0) return
+	if(power <= 0)
+		log_debug("[debug_coord] RECURSIVE EXPLOSION: Invalid power [power]. Exiting.")
+		return
 	epicenter = get_turf(epicenter)
-	if(!epicenter) return
+	if(!epicenter)
+		log_debug("[debug_coord] RECURSIVE EXPLOSION: Invalid or null turf. Exiting.")
+		return
 
+	log_debug("[debug_coord] RECURSIVE EXPLOSION: Setting explosion in progress.")
 	explosion_in_progress = 1
 	explosion_turfs = list()
 
@@ -67,6 +77,7 @@ var/global/explosion_in_progress = 0
 					addtimer(CALLBACK(AM, /atom/movable/.proc/throw_at, throw_target, 9/severity, 9/severity), 0)
 
 	explosion_turfs.Cut()
+	log_debug("[debug_coord] RECURSIVE EXPLOSION: Unsetting explosion in progress and exiting.")
 	explosion_in_progress = 0
 
 
@@ -105,7 +116,12 @@ var/global/explosion_in_progress = 0
 /turf/unsimulated/explosion_spread(power)
 	return //So it doesn't get to the parent proc, which simulates explosions
 
-/atom/var/explosion_resistance
+/// Float. The atom's explosion resistance value. Used to calculate how much of an explosion is 'absorbed' and not passed on to tiles on the other side of the atom's turf. See `/proc/explosion_rec()`.
+/atom/var/explosion_resistance = 0
+
+/**
+ * Retrieves the atom's explosion resistance. Generally, this is `explosion_resistance` for simulated atoms.
+ */
 /atom/proc/get_explosion_resistance()
 	if(simulated)
 		return explosion_resistance
